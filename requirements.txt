@@ -1,0 +1,13 @@
+pip
+wheel
+setuptools 
+virtualenv
+asyncio
+cryptography
+asyncua
+dataclasses
+azure.iot.device
+azure.identity
+azure.keyvault.certificates
+azure.keyvault.secrets
+azure.keyvault.keys

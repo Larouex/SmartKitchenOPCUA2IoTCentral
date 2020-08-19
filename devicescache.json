@@ -1,0 +1,80 @@
+{
+  "DefaultDeviceName": "larouex-smart-kitchen-001",
+  "DeviceCapabilityModels": [
+    {
+      "DeviceNamePrefix": "larouex-industrial-manufacturing-",
+      "DCM": "urn:larouexindustrialmanufacturing:server:1"
+    }
+  ],
+  "Devices": [
+    {
+      "DeviceName": "Simulated Device",
+      "DeviceCapabilityModelId": "urn:LarouexIndustrialManufacturing:Server:1",
+      "Interfaces": [
+        {
+          "Name": "Ambient",
+          "InterfacelId": "urn:larouexindustrialmanufacturing:AmbientInterface:1",
+          "InterfaceInstanceName": "AmbientInterface"
+        },
+        {
+          "Name": "Process",
+          "InterfacelId": "urn:larouexindustrialmanufacturing:ProcessInterface:1",
+          "InterfaceInstanceName": "ProcessInterface"
+        }
+      ],
+      "LastProvisioned": null
+    },
+    {
+      "DeviceName": "larouex-smart-kitchen-001",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Server:1",
+      "Interfaces": [
+        {
+          "Name": "Ambient",
+          "InterfacelId": "urn:larouexsmartkitchen:AmbientInterface:1",
+          "InterfaceInstanceName": "AmbientInterface"
+        },
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        },
+        {
+          "Name": "WalkinFridge",
+          "InterfacelId": "urn:larouexsmartkitchen:WalkinFridgeInterface:1",
+          "InterfaceInstanceName": "WalkinFridgeInterface"
+        },
+        {
+          "Name": "WalkinFreezer",
+          "InterfacelId": "urn:larouexsmartkitchen:WalkinFreezerInterface:1",
+          "InterfaceInstanceName": "WalkinFreezerInterface"
+        },
+        {
+          "Name": "Fryer",
+          "InterfacelId": "urn:larouexsmartkitchen:FryerInterface:1",
+          "InterfaceInstanceName": "FryerInterface"
+        },
+        {
+          "Name": "StandingFridge",
+          "InterfacelId": "urn:larouexsmartkitchen:StandingFridgeInterface:1",
+          "InterfaceInstanceName": "StandingFridgeInterface"
+        },
+        {
+          "Name": "StandingFreezer",
+          "InterfacelId": "urn:larouexsmartkitchen:StandingFreezerInterface:1",
+          "InterfaceInstanceName": "StandingFreezerInterface"
+        },
+        {
+          "Name": "ColdTable",
+          "InterfacelId": "urn:larouexsmartkitchen:ColdTableInterface:1",
+          "InterfaceInstanceName": "ColdTableInterface"
+        },
+        {
+          "Name": "Dishwasher",
+          "InterfacelId": "urn:larouexsmartkitchen:DishwasherInterface:1",
+          "InterfaceInstanceName": "DishwasherInterface"
+        }
+      ],
+      "LastProvisioned": "2020-08-18 01:29:13.616427"
+    }
+  ]
+}
