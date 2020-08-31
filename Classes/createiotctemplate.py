@@ -26,43 +26,83 @@ from Classes.varianttype import VariantType
 
 class CreateIoTCTemplate():
     
-    def __init__(self, Log, InFileName, OutFileName):
+    def __init__(self, Log, InFileName, OutFileName, ModelType):
       self.logger = Log
-      self.infilename = InFileName
-      self.outfilename = OutFileName
+      self.in_file_name = InFileName
+      self.out_file_name = OutFileName
+      self.model_type = ModelType
       self.config = []
       self.dcm_template = None
       self.dcm_template_data = []
       self.nodes = []
+      self.device_name = None
       self.load_config()
       self.load_dcm_template()
         
     # -------------------------------------------------------------------------------
     #   Function:   create
-    #   Usage:      The start function loads configuration and starts the OPC Server
+    #   Usage:      The start function loads configuration and creates the DCM
     # -------------------------------------------------------------------------------
     async def create(self):
 
-      self.prep_dcm()
-      
-      # Create our Nodes and Parameters
-      for node in self.nodes:
-        interface = self.create_interface(node["InterfaceInstanceName"], node["InterfacelId"], node["Name"])
-        self.logger.info("[INTERFACE] %s" % interface)
+      # In the Twin Pattern, we create a single all encompassing version of the
+      # DCM that acts like a full twin representaiton of the Smart Kitchen.
+      # Each machine/device is an interface rolled up under the Smart Kicthen Server
+      if (self.model_type == "twin"):
         
-        for variable in node["Variables"]:
+        self.prep_dcm()
+        
+        for node in self.nodes:
+          interface = self.create_interface(node["InterfaceInstanceName"], node["InterfacelId"], node["Name"])
+          self.logger.info("[INTERFACE] %s" % interface)
+          
+          for variable in node["Variables"]:
             telemetry = self.create_telemetry(variable["DisplayName"], variable["TelemetryName"], variable["IoTCDataType"])
             self.logger.info("[TELEMETRY] %s" % telemetry)
             interface["schema"]["contents"].append(telemetry)
+          
+          self.dcm_template_data["implements"].append(interface)
+      
+        if self.out_file_name == None:
+          self.out_file_name = self.config["NameSpace"] + ".json"
+        else:
+          self.out_file_name = self.out_file_name + ".json"  
         
-        self.dcm_template_data["implements"].append(interface)
+        self.dcm_template.update_file(self.out_file_name, self.dcm_template_data)
+        self.logger.info("[DCM] %s" % self.dcm_template_data)
+
+      # In the Device Pattern, we create a single interface per machine/device
+      # with an interface for each as a specific DCM file.
+      elif (self.model_type == "device"):
       
-      # Write the file to the ./DeviceTemplates folder
-      if self.outfilename == None:
-        self.outfilename = self.config["NameSpace"] + ".json"
-      
-      self.dcm_template.update_file(self.outfilename, self.dcm_template_data)
-      self.logger.info("[DCM] %s" % self.dcm_template_data)
+        for node in self.nodes:
+          
+          self.device_name = node["Name"]
+          self.prep_dcm()
+          
+          interface = self.create_interface(node["InterfaceInstanceName"], node["InterfacelId"], node["Name"])
+          self.logger.info("[INTERFACE] %s" % interface)
+          
+          for variable in node["Variables"]:
+            telemetry = self.create_telemetry(variable["DisplayName"], variable["TelemetryName"], variable["IoTCDataType"])
+            self.logger.info("[TELEMETRY] %s" % telemetry)
+            interface["schema"]["contents"].append(telemetry)
+          
+          self.dcm_template_data["implements"].append(interface)
+
+          save_file_name = self.out_file_name
+            
+          if save_file_name == None:
+            save_file_name = self.config["NameSpace"] + "-" + self.device_name + ".json"
+          else:
+            save_file_name = save_file_name + "-" + self.device_name + ".json"
+
+          self.dcm_template.update_file(save_file_name, self.dcm_template_data)
+          self.logger.info("[DCM] %s" % self.dcm_template_data)
+
+          # Reload and reset for next
+          self.load_dcm_template()
+
 
       return
 
@@ -83,15 +123,22 @@ class CreateIoTCTemplate():
     #   Usage:      Loads the dcm template for generatig a new DCM file
     # -------------------------------------------------------------------------------
     def load_dcm_template(self):
-      
       # Load the template file
       self.dcm_template = DcmTemplate(self.logger)
       self.dcm_template_data = self.dcm_template.data
+      return
 
     def prep_dcm(self):
-      self.dcm_template_data["@id"] = self.dcm_template_data["@id"].format(id = self.config["DeviceCapabilityModelId"])
-      self.dcm_template_data["displayName"] = self.dcm_template_data["displayName"].format(displayName = self.config["ServerDiscoveryName"])
+      # Are we using the Twin or Device Pattern?
+      if (self.model_type == "device"):
+        self.dcm_template_data["@id"] = self.dcm_template_data["@id"].format(id = self.config["PerDeviceDeviceCapabilityModelId"].format(deviceName = self.device_name))
+        self.dcm_template_data["displayName"] = self.dcm_template_data["@id"].format(id = self.config["PerDeviceServerDiscoveryName"].format(deviceName = self.device_name))
+      else:
+        self.dcm_template_data["@id"] = self.dcm_template_data["@id"].format(id = self.config["DeviceCapabilityModelId"])           
+        self.dcm_template_data["displayName"] = self.dcm_template_data["displayName"].format(displayName = self.config["ServerDiscoveryName"])
+      
       self.dcm_template_data["description"] = self.dcm_template_data["description"].format(description = self.config["Description"])
+      return
 
 
     def create_interface(self, name, id, displayName):
