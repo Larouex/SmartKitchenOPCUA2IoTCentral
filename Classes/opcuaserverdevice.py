@@ -1,12 +1,13 @@
 # ==================================================================================
 #   File:   opcuaserverdevice.py
 #   Author: Larry W Jordan Jr (larouex@gmail.com)
-#   Use:    This is the class that handles config and creation of the OPC Server
+#   Use:    This class will create an OPC-UA Server that is capable of sending
+#           multiple device data
 #
 #   Online:   www.hackinmakin.com
 #
 #   (c) 2020 Larouex Software Design LLC
-#   This code is licensed under MIT license (see LICENSE.txt for details)    
+#   This code is licensed under MIT license (see LICENSE.txt for details)
 # ==================================================================================
 import json, sys, time, string, threading, asyncio, os, copy
 import logging
@@ -26,10 +27,16 @@ from Classes.varianttype import VariantType
 
 class OpcUaServerDevice():
     
+<<<<<<< HEAD
     def __init__(self, Log, WhatIf, InterfaceName):
       self.logger = Log
       self.whatif = WhatIf
       self.interface_name = InterfaceName
+=======
+    def __init__(self, Log, WhatIf):
+      self.logger = Log
+      self.whatif = WhatIf
+>>>>>>> ab7c1046a396566a2e95fc6617baec378eb3c68d
       self.config = []
       self.nodes = []
       self.nodes_dict = {}
@@ -85,6 +92,7 @@ class OpcUaServerDevice():
 
         # Create our nodes and Parameters
         for node in self.nodes:
+<<<<<<< HEAD
           
           # are working on the passed Interface Name?
           if node["Name"] == self.interface_name:
@@ -109,14 +117,48 @@ class OpcUaServerDevice():
               self.logger.info(log_msg.format(nn = node["Name"], dn = variable["DisplayName"], vn = variable["TelemetryName"], tn = variable["TelemetryName"], rv = variable["RangeValues"][0], it = variable["IoTCDataType"], ovt = opc_variant_type, odt = opc_variant_type))
 
               # Create node Variable
+=======
+
+          # Add Node and Begin Populating our Address Space
+          if not self.whatif:
+            # Create Node
+            node_obj[node["Name"]] = await opc_server.nodes.objects.add_object(id_namespace, node["Name"])
+            self.logger.info("[NODE ID] %s" % node_obj[node["Name"]])
+            # Setup nodes for Map Telemetry
+            self.map_telemetry["Nodes"].append(self.create_map_telemetry_node(node["Name"], str(node_obj[node["Name"]]), node["InterfacelId"], node["InterfaceInstanceName"]))
+
+          for variable in node["Variables"]:
+            variable_name = variable["DisplayName"]
+            telemetry_name = variable["TelemetryName"]
+            range_value = variable["RangeValues"][0]
+            opc_variant_type = variant_type.map_variant_type(variable["IoTCDataType"])
+            log_msg = "[SETUP VARIABLE] NODE NAME: {nn} DISPLAY NAME: {dn} TELEMETRY NAME: {tn} RANGE VALUE: {rv} " \
+              "IoTC TYPE: {it} OPC VARIANT TYPE {ovt} OPC DATA TYPE {odt}"
+            self.logger.info(log_msg.format(nn = node["Name"], dn = variable["DisplayName"], vn = variable["TelemetryName"], \
+              tn = variable["TelemetryName"], rv = variable["RangeValues"][0], it = variable["IoTCDataType"], \
+                ovt = opc_variant_type, odt = opc_variant_type))
+
+            if not self.whatif:
+              # Create Node Variable
+>>>>>>> ab7c1046a396566a2e95fc6617baec378eb3c68d
               nodeObject = await node_obj[node["Name"]].add_variable(id_namespace, telemetry_name, range_value)
               await nodeObject.set_writable()
               variable_obj[telemetry_name] = nodeObject
               self.map_telemetry_nodes_variables.append(self.create_map_telemetry_variable(variable_name, telemetry_name, str(variable_obj[telemetry_name]), variable["IoTCDataType"]))
+<<<<<<< HEAD
           
           node_count = node_count + 1
         
         self.update_map_telemetry()
+=======
+
+          if not self.whatif:
+            self.map_telemetry["Nodes"][node_count]["Variables"] = copy.copy(self.map_telemetry_nodes_variables)
+            self.logger.info("[MAP] %s" % self.map_telemetry)
+            self.map_telemetry_nodes_variables =  []
+
+          node_count += 1
+>>>>>>> ab7c1046a396566a2e95fc6617baec378eb3c68d
 
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
