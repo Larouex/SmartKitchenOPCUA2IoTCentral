@@ -9,15 +9,66 @@
 #   Online:   www.hackinmakin.com
 #
 #   (c) 2020 Larouex Software Design LLC
-#   This code is licensed under MIT license (see LICENSE.txt for details)    
+#   This code is licensed under MIT license (see LICENSE.txt for details)
 # ==================================================================================
 import  getopt, sys, time, string, threading, asyncio, os
 import logging as Log
 
 # our classes
 from Classes.opcuaserverdevice import OpcUaServerDevice
+from Classes.opcuaserver import OpcUaServer
+
 from Classes.config import Config
 from Classes.varianttype import VariantType
+
+# -------------------------------------------------------------------------------
+#   Setup the OPC Server for Multiple Twin and Device Patterns
+# -------------------------------------------------------------------------------
+async def setup_server(WhatIf, OpcuaServer):
+
+  try:
+
+    Log.info("[SERVER] setup_server...")
+    return await OpcuaServer.setup()
+
+  except Exception as ex:
+    Log.error("[ERROR] %s" % ex)
+    Log.error("[TERMINATING] We encountered an error in [setup_server]" )
+    return
+
+
+# -------------------------------------------------------------------------------
+#   Start the OPC Server for Multiple Twin and Device Patterns
+# -------------------------------------------------------------------------------
+async def start_server(WhatIf, OpcuaServer):
+
+  try:
+
+    Log.info("[SERVER] start_server...")
+    return await OpcuaServer.start()
+
+  except Exception as ex:
+    Log.error("[ERROR] %s" % ex)
+    Log.error("[TERMINATING] We encountered an error in [start_server]" )
+
+  finally:
+    await stop_server(WhatIf, OpcuaServer)
+
+# -------------------------------------------------------------------------------
+#   Start the OPC Server for Multiple Twin and Device Patterns
+# -------------------------------------------------------------------------------
+async def stop_server(WhatIf, OpcuaServer):
+
+  try:
+
+    Log.info("[SERVER] stop_server...")
+    await OpcuaServer.stop()
+    return
+
+  except Exception as ex:
+    Log.error("[ERROR] %s" % ex)
+    Log.error("[TERMINATING] We encountered an error in [stop_server]" )
+
 
 # -------------------------------------------------------------------------------
 #   Start the OPC Server for Multiple Devices
@@ -93,24 +144,27 @@ async def main(argv):
     if current_argument in ("-i", "--interfacename"):
       interface_name = current_value
       Log.info("Interface Name is Specified as: {interface_name}".format(interface_name = interface_name))
-    
+
     if current_argument in ("-m", "--modeltype"):
       model_type = current_value
       Log.info("Model Type is Specified as: {model_type}".format(model_type = model_type))
-    
+
       # validate the value is one of our allowed parameters
       if (model_type != "twin" and model_type != "device"):
         Log.info("[ERROR] -m --modeltype must be specified as either twin | device")
         return
-    
+
   # validate the value is one of our allowed parameters
   if (interface_name == None):
     Log.info("[ERROR] Missing --interfacename parameter. Indicate the name (case-senstive) of the Iterface Node to Instantiate the OPC-UA Server.")
     return
 
-  # Start Server
-  if (model_type == "device"):
-    await start_server_device(whatif, interface_name)
+  # Configure Server
+  opcua_server = OpcUaServer(Log, whatif)
+  await setup_server(whatif, opcua_server)
+  Log.info("[SERVER] Instance Info (opcua_server): %s" % opcua_server)
+  
+  await start_server(whatif, opcua_server)
 
 if __name__ == "__main__":
     asyncio.run(main(sys.argv[1:]))
