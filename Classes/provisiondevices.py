@@ -156,13 +156,8 @@ class ProvisionDevices():
           # our twin device from the interfaces configuration
           for node in self.nodes:
             
-            print("here")
-            print(self.config["PerDeviceDeviceIgnoreInterfaceIds"])
-            
             # check if we are excluding 
-            
             if self.config["PerDeviceDeviceIgnoreInterfaceIds"].count(node["InterfacelId"]) == 0:
-              print("here")
 
               # We will enumerate the number of devices we are going to create
               for x in range(self.number_of_devices):
