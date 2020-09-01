@@ -2,13 +2,13 @@
 # ==================================================================================
 #   File:   provisiondevices.py
 #   Author: Larry W Jordan Jr (larouex@gmail.com)
-#   Use:    Provisions Devices and updates cache file and do device provisioning 
+#   Use:    Provisions Devices and updates cache file and do device provisioning
 #           via DPS for IoT Central
 #
 #   Online: www.hackinmakin.com
 #
 #   (c) 2020 Larouex Software Design LLC
-#   This code is licensed under MIT license (see LICENSE.txt for details)    
+#   This code is licensed under MIT license (see LICENSE.txt for details)
 # ==================================================================================
 import time, logging, string, json, os, binascii, struct, threading, asyncio, datetime
 
@@ -17,7 +17,6 @@ from Classes.devicescache import DevicesCache
 from Classes.secrets import Secrets
 from Classes.symmetrickey import SymmetricKey
 from Classes.config import Config
-
 
 # uses the Azure IoT Device SDK for Python (Native Python libraries)
 from azure.iot.device.aio import ProvisioningDeviceClient
@@ -46,7 +45,7 @@ class ProvisionDevices():
       self.characteristics = []
       self.load_config()
       self.device_secrets = []
-  
+
     async def provision_devices(self):
 
       # First up we gather all of the needed provisioning meta-data and secrets
@@ -66,7 +65,7 @@ class ProvisionDevices():
 
         # Symetric Key for handling Device Specific SaS Keys
         symmetrickey = SymmetricKey(self.logger)
-      
+
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
         self.logger.error("[TERMINATING] We encountered an error gathering needed provisioning meta-data and secrets" )
@@ -76,11 +75,9 @@ class ProvisionDevices():
       # Based upon the type of provisionign we are performing (twin or device), we gather
       # up all of our meta-data and enumerate to create the devices in IoT Central
       if (self.model_type == "twin"):
-        
         try:
 
           # Gather and Define the DCM Information
-          
           # Device Id is formatted as [larouex-smart-kitchen-{id}]
           id_number_str = str(self.iddevice)
           id_number_str = id_number_str.zfill(3)
@@ -92,27 +89,27 @@ class ProvisionDevices():
           self.logger.info("[DEVICE ID] %s" % device_id)
           self.logger.info("[DCM] %s" % device_capability_model)
 
-          # Let's Look at the config file and generate 
+          # Let's Look at the config file and generate
           # our twin device from the interfaces configuration
           for node in self.nodes:
             device_interface = self.create_device_interface(node["Name"], node["InterfacelId"], node["InterfaceInstanceName"])
             device_capability_model["Interfaces"].append(device_interface)
             self.logger.info("[INTERFACE] %s" % device_interface)
 
-          # Dump the Device Info  
+          # Dump the Device Info
           self.logger.info("[DEVICE] MODEL %s" % device_capability_model)
-           
+
           # Get a Device Specific Symetric Key
           device_symmetrickey = symmetrickey.compute_derived_symmetric_key(device_capability_model["DeviceName"], secrets.get_device_secondary_key())
           self.logger.info("[SYMETRIC KEY] %s" % device_symmetrickey)
 
           # Provision the Device
           self.logger.info("[PROVISIONING] %s" % device_capability_model["DeviceName"])
-          
+
           # Check if we are in WhatIf and if not, let's provision the device as collective
           # twin patterm into IoT Central...
           if not self.whatif:
-            
+
             self.logger.info("[PROVISIONING HOST]: %s" % secrets.get_provisioning_host())
 
             # Azure IoT Central SDK Call to create the provisioning_device_client
@@ -149,28 +146,22 @@ class ProvisionDevices():
       # Based upon the type of provisionign we are performing (twin or device), we gather
       # up all of our meta-data and enumerate to create the devices in IoT Central
       elif (self.model_type == "device"):
-        
         try:
 
-          # Let's Look at the config file and generate 
-          # our twin device from the interfaces configuration
+          # Let's Look at the config file and generate
+          # our device from the interfaces configuration
           for node in self.nodes:
-            
-            print("here")
-            print(self.config["PerDeviceDeviceIgnoreInterfaceIds"])
-            
-            # check if we are excluding 
-            
+
+            # check if we are excluding
             if self.config["PerDeviceDeviceIgnoreInterfaceIds"].count(node["InterfacelId"]) == 0:
-              print("here")
 
               # We will enumerate the number of devices we are going to create
               for x in range(self.number_of_devices):
-                
+
                 # Gather and Define the DCM Information
                 id_number_str = str(int(self.iddevice) + x)
                 id_number_str = id_number_str.zfill(3)
-                
+
                 # Device Id is formatted as [larouex-smart-kitchen-{deviceName}-{id}]
                 device_id = self.config["DeviceNameDevice"].format(deviceName = node["Name"], id=id_number_str)
 
