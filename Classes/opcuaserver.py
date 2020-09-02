@@ -55,23 +55,43 @@ class OpcUaServer():
 
 
     # -------------------------------------------------------------------------------
-    #   Function:   start
+    #   Function:   run
     #   Usage:      The start function starts the OPC Server
     # -------------------------------------------------------------------------------
-    async def start(self):
+    async def run(self):
 
-      self.logger.info("[SERVER STARTING] GETTING ENDPOINT(s):")
+      # OPCUA Server Run
+      try:
 
-      list_endpoints = self.opcua_server_instance.get_endpoints()
+        async with self.opcua_server_instance:
+          while True:
+            await asyncio.sleep(self.config["ServerFrequencyInSeconds"])
+            self.logger.info("[SERVER LOOP] STARTING:")
 
-      self.logger.info("[SERVER STARTING] ENDPOINT(s): %s" % list_endpoints)
+            for device in self.map_telemetry["Devices"]:
+              for interface in device["Interfaces"]:
+                for variable in interface["Variables"]:
 
-      async with self.opcua_server_instance:
-        while True:
-          await asyncio.sleep(self.config["ServerFrequencyInSeconds"])
-          self.logger.info("[SERVER] Loop Executed:")
+                  # Get the values from our ranges we are writing
+                  value = variable["RangeValues"][int(variable["RangeValueCurrent"]) - 1]
+                  self.logger.info("[SERVER LOOP] VALUE: %s" % value)
 
-      return
+                  # Update our iterator and boundaries
+                  if int(variable["RangeValueCurrent"]) < int(variable["RangeValueCount"]):
+                    variable["RangeValueCurrent"] = int(variable["RangeValueCurrent"]) + 1
+                  else:
+                    variable["RangeValueCurrent"] = 1
+
+                  print("int(variable[RangeValueCurrent]) %s" % int(variable["RangeValueCurrent"]))
+                  print("int(variable[RangeValueCount]) %s" % int(variable["RangeValueCount"]))
+
+                  variable_node_instance = self.opcua_server_instance.get_node(variable["NodeId"])
+                  await variable_node_instance.write_value(value)
+
+        return
+      except Exception as ex:
+        self.logger.error("[ERROR] %s" % ex)
+        self.logger.error("[TERMINATING] We encountered an error in OpcUaServer::run()" )
 
     # -------------------------------------------------------------------------------
     #   Function:   stop
@@ -138,7 +158,7 @@ class OpcUaServer():
 
         # Data Type Mappings (OPCUA Datatypes to IoT Central Datatypes)
         variant_type = VariantType(self.logger)
-        
+
         device_count = 0
         for device in self.devicescache["Devices"]:
 
@@ -188,21 +208,22 @@ class OpcUaServer():
               self.variable_instances[telemetry_name] = nodeObject
 
               # Append the variables to the Interfaces collection for the map telemetry file
-              self.map_telemetry_interfaces_variables.append(self.create_map_telemetry_variable(variable_name, telemetry_name, str(self.variable_instances[telemetry_name]), variable["IoTCDataType"]))
+              self.map_telemetry_interfaces_variables.append(self.create_map_telemetry_variable(variable_name, str(self.variable_instances[telemetry_name]), telemetry_name, variable["IoTCDataType"], variable["Frequency"], variable["OnlyOnValueChange"], variable["RangeValues"]))
+              self.logger.info("[SERVER] MAP TELEMETRY VARIABLES APPEND: %s" % self.map_telemetry_interfaces[interface_count])
 
             # Save the variables to the Map Telemetry [Interface] Collection
-            self.map_telemetry_interfaces[interface_count]["Variables"].append(self.map_telemetry_interfaces_variables)
+            self.map_telemetry_interfaces[interface_count]["Variables"] = self.map_telemetry_interfaces_variables
             self.logger.info("[SERVER] MAP TELEMETRY INTERFACES APPEND: %s" % self.map_telemetry_interfaces[interface_count])
             interface_count = interface_count + 1
             self.map_telemetry_interfaces_variables = []
 
           # Append the Interfaces to the Devices collection for the map telemetry file
-          self.map_telemetry_devices[device_count]["Interfaces"].append(self.map_telemetry_interfaces)
+          self.map_telemetry_devices[device_count]["Interfaces"] = self.map_telemetry_interfaces
           device_count = device_count + 1
           self.map_telemetry_interfaces = []
 
         # Append the Devices to the Root collection for the map telemetry file
-        self.map_telemetry["Devices"].append(self.map_telemetry_devices)
+        self.map_telemetry["Devices"] = self.map_telemetry_devices
         self.logger.info("[SERVER] MAP TELEMETRY: %s" % self.map_telemetry)
         self.update_map_telemetry()
 
@@ -279,12 +300,17 @@ class OpcUaServer():
     #   Function:   create_map_telemetry_variable
     #   Usage:      Sets the variable for the Map Telemetry configuration file
     # -------------------------------------------------------------------------------
-    def create_map_telemetry_variable(self, DisplayName, OpcUaNodeId, TelemetryName, IoTCDataType):
+    def create_map_telemetry_variable(self, DisplayName, OpcUaNodeId, TelemetryName, IoTCDataType, Frequency, OnlyOnValueChange, RangeValues):
       mapTelemetry = {
         "DisplayName": DisplayName,
         "NodeId": OpcUaNodeId,
         "TelemetryName": TelemetryName,
-        "IoTCDataType": IoTCDataType
+        "IoTCDataType": IoTCDataType,
+        "Frequency": Frequency,
+        "OnlyOnValueChange": OnlyOnValueChange,
+        "RangeValueCount": len(RangeValues),
+        "RangeValueCurrent": 1,
+        "RangeValues": RangeValues
       }
       return mapTelemetry
 

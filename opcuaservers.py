@@ -55,12 +55,12 @@ async def load_nodes_from_devicecache(WhatIf, OpcuaServer):
 # -------------------------------------------------------------------------------
 #   Start the OPC Server for Multiple Twin and Device Patterns
 # -------------------------------------------------------------------------------
-async def start_server(WhatIf, OpcuaServer):
+async def run_server(WhatIf, OpcuaServer):
 
   try:
 
     Log.info("[SERVER] start_server...")
-    return await OpcuaServer.start()
+    return await OpcuaServer.run()
 
   except Exception as ex:
     Log.error("[ERROR] %s" % ex)
@@ -178,10 +178,12 @@ async def main(argv):
   opcua_server = OpcUaServer(Log, whatif)
   await setup_server(whatif, opcua_server)
   Log.info("[SERVER] Instance Info (opcua_server): %s" % opcua_server)
-  
+
+  # Load the meta-data and map OPC-UA to IoTC Interfaces
   await load_nodes_from_devicecache(whatif, opcua_server)
-  
-  await start_server(whatif, opcua_server)
+
+  # Start the server loop
+  await run_server(whatif, opcua_server)
 
 if __name__ == "__main__":
     asyncio.run(main(sys.argv[1:]))
