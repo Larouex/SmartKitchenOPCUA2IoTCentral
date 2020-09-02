@@ -252,14 +252,14 @@ class ProvisionDevices():
     # -------------------------------------------------------------------------------
     def create_device_capability_model(self, deviceName, id):
       newDeviceCapabilityModel = {
-        "DeviceName": deviceName, 
+        "DeviceName": deviceName,
         "DeviceType": self.model_type,
         "DeviceCapabilityModelId": id,
         "Interfaces": [
         ],
         "LastProvisioned": str(datetime.datetime.now())
-      } 
-      return newDeviceCapabilityModel 
+      }
+      return newDeviceCapabilityModel
 
     # -------------------------------------------------------------------------------
     #   Function:   create_device_interface

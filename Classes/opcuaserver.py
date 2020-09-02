@@ -8,7 +8,7 @@
 #   (c) 2020 Larouex Software Design LLC
 #   This code is licensed under MIT license (see LICENSE.txt for details)
 # ==================================================================================
-import json, sys, time, string, threading, asyncio, os, copy
+import json, sys, time, string, threading, asyncio, os, copy, datetime
 import logging
 
 # For dumping and Loading Address Space option
@@ -21,7 +21,7 @@ from asyncua.common.methods import uamethod
 # our classes
 from Classes.config import Config
 from Classes.devicescache import DevicesCache
-from Classes.maptelemetrydevices import MapTelemetryDevices
+from Classes.maptelemetry import MapTelemetry
 from Classes.varianttype import VariantType
 
 
@@ -46,6 +46,13 @@ class OpcUaServer():
 
       self.node_instances = {}
       self.variable_instances = {}
+
+      # Telemetry Mapping
+      self.map_telemetry = []
+      self.map_telemetry_devices = []
+      self.map_telemetry_interfaces = []
+      self.map_telemetry_interfaces_variables = []
+
 
     # -------------------------------------------------------------------------------
     #   Function:   start
@@ -92,7 +99,7 @@ class OpcUaServer():
 
         self.opcua_server_instance.set_endpoint(opc_url)
         self.opcua_server_instance.set_server_name(self.config["ServerDiscoveryName"])
-        self.opcua_server_instance.set_application_uri(self.config["ApplicationUri"])
+        await self.opcua_server_instance.set_application_uri(self.config["ApplicationUri"])
 
         self.logger.info("[SERVER CONFIG] ENDPOINT: %s" % opc_url)
         self.logger.info("[SERVER CONFIG] APPLICATION URI: %s" % self.config["ApplicationUri"])
@@ -125,65 +132,79 @@ class OpcUaServer():
 
         self.logger.info("[SERVER] STARTING load_nodes_from_devicecache()")
 
+        # Setup root for map telemetry configuration file
+        self.map_telemetry = self.create_map_telemetry_root(self.config["NameSpace"])
+        self.logger.info("[SERVER] INITIATED MAP TELEMETRY FILE: %s" % self.map_telemetry)
+
         # Data Type Mappings (OPCUA Datatypes to IoT Central Datatypes)
         variant_type = VariantType(self.logger)
-
+        
+        device_count = 0
         for device in self.devicescache["Devices"]:
 
+          self.logger.info("[SERVER] DEVICE TYPE: %s" % device["DeviceType"])
+          self.logger.info("[SERVER] DEVICE NAME: %s" % device["DeviceName"])
+
           # DEVICE PER NODE
+          namespace_id = None
+
           if device["DeviceType"] == "device":
-            self.logger.info("[SERVER] DEVICE TYPE: %s" % device["DeviceType"])
-            self.logger.info("[DEVICE] DEVICE NAME: %s" % device["DeviceName"])
-
-            self.node_instances[device["DeviceName"]] = await self.opcua_server_instance.nodes.objects.add_object(self.opcua_id_namespace_devices, device["DeviceName"])
-            self.logger.info("[SERVER] NODE ID: %s" % self.node_instances[device["DeviceName"]])
-
-            for interface in device["Interfaces"]:
-
-              config_interface = [obj for obj in self.config["Nodes"] if obj["InterfaceInstanceName"]==interface["InterfaceInstanceName"]]
-              print("----HERE------ %s" % config_interface)
-
-              for variable in config_interface[0]["Variables"]:
-                variable_name = variable["DisplayName"]
-                telemetry_name = variable["TelemetryName"]
-                range_value = variable["RangeValues"][0]
-                opc_variant_type = variant_type.map_variant_type(variable["IoTCDataType"])
-
-                # Log Verbose Feedback
-                log_msg = "[SETUP VARIABLE] DISPLAY NAME: {dn} TELEMETRY NAME: {tn} RANGE VALUE: {rv} IoTC TYPE: {it} OPC VARIANT TYPE {ovt} OPC DATA TYPE {odt}"
-                self.logger.info(log_msg.format(dn = variable["DisplayName"], vn = variable["TelemetryName"], tn = variable["TelemetryName"], rv = variable["RangeValues"][0], it = variable["IoTCDataType"], ovt = opc_variant_type, odt = opc_variant_type))
-
-                # Create Node Variable
-                nodeObject = await self.node_instances[device["DeviceName"]].add_variable(self.opcua_id_namespace_devices, telemetry_name, range_value)
-                await nodeObject.set_writable()
-                self.variable_instances[telemetry_name] = nodeObject
-
+            namespace_id = self.opcua_id_namespace_devices
           elif device["DeviceType"] == "twin":
+            namespace_id = self.opcua_id_namespace_twins
 
-            self.logger.info("[SERVER] DEVICE TYPE: %s" % device["DeviceType"])
-            self.logger.info("[DEVICE] TWIN NAME: %s" % device["DeviceName"])
+          self.logger.info("[SERVER] DEVICE TYPE: %s" % device["DeviceType"])
+          self.logger.info("[SERVER] DEVICE NAME: %s" % device["DeviceName"])
 
-            self.node_instances[device["DeviceName"]] = await self.opcua_server_instance.nodes.objects.add_object(self.opcua_id_namespace_devices, device["DeviceName"])
-            self.logger.info("[SERVER] NODE ID: %s" % self.node_instances[device["DeviceName"]])
+          self.node_instances[device["DeviceName"]] = await self.opcua_server_instance.nodes.objects.add_object(namespace_id, device["DeviceName"])
+          self.logger.info("[SERVER] NODE ID: %s" % self.node_instances[device["DeviceName"]])
 
-            for interface in device["Interfaces"]:
+          # Add the device info to the map telemetry file
+          self.map_telemetry_devices.append(self.create_map_telemetry_device(device["DeviceName"], str(self.node_instances[device["DeviceName"]]), device["DeviceType"], device["DeviceCapabilityModelId"]))
+          self.logger.info("[SERVER] ADDED DEVICE TO MAP TELEMETRY FILE: %s" % self.map_telemetry_devices)
 
-              config_interface = [obj for obj in self.config["Nodes"] if obj["InterfaceInstanceName"]==interface["InterfaceInstanceName"]]
+          interface_count = 0
+          for interface in device["Interfaces"]:
 
-              for variable in config_interface[0]["Variables"]:
-                variable_name = variable["DisplayName"]
-                telemetry_name = variable["TelemetryName"]
-                range_value = variable["RangeValues"][0]
-                opc_variant_type = variant_type.map_variant_type(variable["IoTCDataType"])
+            # Add the interface info to the map telemetry file
+            self.map_telemetry_interfaces.append(self.create_map_telemetry_interface(interface["Name"], interface["InterfacelId"], interface["InterfaceInstanceName"]))
+            self.logger.info("[SERVER] ADDED INTERFACE TO MAP TELEMETRY FILE: %s" % self.map_telemetry_interfaces)
 
-                # Log Verbose Feedback
-                log_msg = "[SETUP VARIABLE] DISPLAY NAME: {dn} TELEMETRY NAME: {tn} RANGE VALUE: {rv} IoTC TYPE: {it} OPC VARIANT TYPE {ovt} OPC DATA TYPE {odt}"
-                self.logger.info(log_msg.format(dn = variable["DisplayName"], vn = variable["TelemetryName"], tn = variable["TelemetryName"], rv = variable["RangeValues"][0], it = variable["IoTCDataType"], ovt = opc_variant_type, odt = opc_variant_type))
+            config_interface = [obj for obj in self.config["Nodes"] if obj["InterfaceInstanceName"]==interface["InterfaceInstanceName"]]
 
-                # Create Node Variable
-                nodeObject = await self.node_instances[device["DeviceName"]].add_variable(self.opcua_id_namespace_devices, telemetry_name, range_value)
-                await nodeObject.set_writable()
-                self.variable_instances[telemetry_name] = nodeObject
+            for variable in config_interface[0]["Variables"]:
+              variable_name = variable["DisplayName"]
+              telemetry_name = variable["TelemetryName"]
+              range_value = variable["RangeValues"][0]
+              opc_variant_type = variant_type.map_variant_type(variable["IoTCDataType"])
+
+              # Log Verbose Feedback
+              log_msg = "[SERVER] SETUP VARIABLES: *DISPLAY NAME: {dn} TELEMETRY NAME: {tn} *RANGE VALUE: {rv} *IoTC TYPE: {it} *OPC VARIANT TYPE {ovt} *OPC DATA TYPE {odt}"
+              self.logger.info(log_msg.format(dn = variable["DisplayName"], vn = variable["TelemetryName"], tn = variable["TelemetryName"], rv = variable["RangeValues"][0], it = variable["IoTCDataType"], ovt = opc_variant_type, odt = opc_variant_type))
+
+              # Create Node Variable
+              nodeObject = await self.node_instances[device["DeviceName"]].add_variable(namespace_id, telemetry_name, range_value)
+              await nodeObject.set_writable()
+              self.variable_instances[telemetry_name] = nodeObject
+
+              # Append the variables to the Interfaces collection for the map telemetry file
+              self.map_telemetry_interfaces_variables.append(self.create_map_telemetry_variable(variable_name, telemetry_name, str(self.variable_instances[telemetry_name]), variable["IoTCDataType"]))
+
+            # Save the variables to the Map Telemetry [Interface] Collection
+            self.map_telemetry_interfaces[interface_count]["Variables"].append(self.map_telemetry_interfaces_variables)
+            self.logger.info("[SERVER] MAP TELEMETRY INTERFACES APPEND: %s" % self.map_telemetry_interfaces[interface_count])
+            interface_count = interface_count + 1
+            self.map_telemetry_interfaces_variables = []
+
+          # Append the Interfaces to the Devices collection for the map telemetry file
+          self.map_telemetry_devices[device_count]["Interfaces"].append(self.map_telemetry_interfaces)
+          device_count = device_count + 1
+          self.map_telemetry_interfaces = []
+
+        # Append the Devices to the Root collection for the map telemetry file
+        self.map_telemetry["Devices"].append(self.map_telemetry_devices)
+        self.logger.info("[SERVER] MAP TELEMETRY: %s" % self.map_telemetry)
+        self.update_map_telemetry()
 
         return
 
@@ -212,4 +233,67 @@ class OpcUaServer():
       self.devicescache = devicescache.data
       return
 
+    # -------------------------------------------------------------------------------
+    #   Function:   create_map_telemetry_root
+    #   Usage:      Sets the root for the Map Telemetry configuration file
+    # -------------------------------------------------------------------------------
+    def create_map_telemetry_root(self, NameSpace):
+      mapTelemetry = {
+        "NameSpace": NameSpace,
+        "Created": str(datetime.datetime.now()),
+        "Devices": [
+        ]
+      }
+      return mapTelemetry
+
+    # -------------------------------------------------------------------------------
+    #   Function:   create_map_telemetry_device
+    #   Usage:      Adds a device to the map telemetry configuration file
+    # -------------------------------------------------------------------------------
+    def create_map_telemetry_device(self, DeviceName, OpcUaNodeId, DeviceType, DeviceCapabilityModelId):
+      mapTelemetry = {
+        "DeviceName": DeviceName,
+        "NodeId": OpcUaNodeId,
+        "DeviceType": DeviceType,
+        "DeviceCapabilityModelId": DeviceCapabilityModelId,
+        "Interfaces": [
+        ]
+      }
+      return mapTelemetry
+
+    # -------------------------------------------------------------------------------
+    #   Function:   create_map_telemetry_interface
+    #   Usage:      Sets the node for the Map Telemetry configuration file
+    # -------------------------------------------------------------------------------
+    def create_map_telemetry_interface(self, Name, InterfacelId, InterfaceInstanceName):
+      mapTelemetry = {
+        "Name": Name,
+        "InterfacelId": InterfacelId,
+        "InterfaceInstanceName": InterfaceInstanceName,
+        "Variables":[
+        ]
+      }
+      return mapTelemetry
+
+    # -------------------------------------------------------------------------------
+    #   Function:   create_map_telemetry_variable
+    #   Usage:      Sets the variable for the Map Telemetry configuration file
+    # -------------------------------------------------------------------------------
+    def create_map_telemetry_variable(self, DisplayName, OpcUaNodeId, TelemetryName, IoTCDataType):
+      mapTelemetry = {
+        "DisplayName": DisplayName,
+        "NodeId": OpcUaNodeId,
+        "TelemetryName": TelemetryName,
+        "IoTCDataType": IoTCDataType
+      }
+      return mapTelemetry
+
+    # -------------------------------------------------------------------------------
+    #   Function:   update_map_telemetry
+    #   Usage:      Saves the generated Map Telemetry File
+    # -------------------------------------------------------------------------------
+    def update_map_telemetry(self):
+      map_telemetry_file = MapTelemetry(self.logger)
+      map_telemetry_file.update_file(self.map_telemetry)
+      return
 
