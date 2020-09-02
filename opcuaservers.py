@@ -36,6 +36,21 @@ async def setup_server(WhatIf, OpcuaServer):
     Log.error("[TERMINATING] We encountered an error in [setup_server]" )
     return
 
+# -------------------------------------------------------------------------------
+#   Load the Devices previously registered and provisioned and set to Namespaces
+#   for Device or Twin when browsing
+# -------------------------------------------------------------------------------
+async def load_nodes_from_devicecache(WhatIf, OpcuaServer):
+
+  try:
+
+    Log.info("[SERVER] load_nodes_from_devicecache...")
+    return await OpcuaServer.load_nodes_from_devicecache()
+
+  except Exception as ex:
+    Log.error("[ERROR] %s" % ex)
+    Log.error("[TERMINATING] We encountered an error in [load_nodes_from_devicecache]" )
+    return
 
 # -------------------------------------------------------------------------------
 #   Start the OPC Server for Multiple Twin and Device Patterns
@@ -163,6 +178,8 @@ async def main(argv):
   opcua_server = OpcUaServer(Log, whatif)
   await setup_server(whatif, opcua_server)
   Log.info("[SERVER] Instance Info (opcua_server): %s" % opcua_server)
+  
+  await load_nodes_from_devicecache(whatif, opcua_server)
   
   await start_server(whatif, opcua_server)
 
