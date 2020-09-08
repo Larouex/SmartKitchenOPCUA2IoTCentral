@@ -7,13 +7,13 @@
 #   Online:   www.hackinmakin.com
 #
 #   (c) 2020 Larouex Software Design LLC
-#   This code is licensed under MIT license (see LICENSE.txt for details)    
+#   This code is licensed under MIT license (see LICENSE.txt for details)
 # ==================================================================================
 import  hmac, getopt, sys, time, binascii, \
         struct, string, threading, asyncio, os
 
 import logging as Log
-    
+
 # our classes
 from Classes.config import Config
 from Classes.gateway import Gateway
@@ -24,10 +24,10 @@ config_data = None
 # -------------------------------------------------------------------------------
 #   Start Gateway
 # -------------------------------------------------------------------------------
-async def start_gateway(WhatIf):
+async def gateway_run(WhatIf):
 
   gateway = Gateway(Log, WhatIf)
-  await gateway.start()
+  await gateway.run()
   return True
 
 async def main(argv):
@@ -39,12 +39,12 @@ async def main(argv):
     long_options = ["help", "verbose", "debug", "whatif"]
     full_cmd_arguments = sys.argv
     argument_list = full_cmd_arguments[1:]
-    
+
     try:
         arguments, values = getopt.getopt(argument_list, short_options, long_options)
     except getopt.error as err:
         print (str(err))
-    
+
     for current_argument, current_value in arguments:
 
       if current_argument in ("-h", "--help"):
@@ -73,7 +73,7 @@ async def main(argv):
           whatif = True
           Log.info("Whatif Mode...")
 
-    await start_gateway(whatif)
+    await gateway_run(whatif)
 
 if __name__ == "__main__":
     asyncio.run(main(sys.argv[1:]))

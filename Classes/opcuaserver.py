@@ -235,8 +235,7 @@ class OpcUaServer():
 
     # -------------------------------------------------------------------------------
     #   Function:   load_config
-    #   Usage:      Loads the configuration from file and setup iterators for
-    #               sending telemetry in sequence
+    #   Usage:      Loads the configuration from file
     # -------------------------------------------------------------------------------
     def load_config(self):
 
@@ -246,7 +245,9 @@ class OpcUaServer():
 
     # -------------------------------------------------------------------------------
     #   Function:   load_devicescache
-    #   Usage:      Loads the Devices that have been registered and provisioned
+    #   Usage:      Loads the Devices that have been registered and provisioned.
+    #               This file is generated from the as-is state of the system
+    #               when the OpcUaServer is started.
     # -------------------------------------------------------------------------------
     def load_devicescache(self):
 

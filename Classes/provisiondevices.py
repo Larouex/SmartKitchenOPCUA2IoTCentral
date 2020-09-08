@@ -30,231 +30,238 @@ class ProvisionDevices():
     timer_ran = False
     dcm_value = None
 
-    def __init__(self, Log, WhatIf, Id, InFileName, ModelType, NumberOfDevices):
+    def __init__(self, Log, Id, InFileName, ModelType, NumberOfDevices):
       self.logger = Log
-      self.whatif = WhatIf
-      self.iddevice = Id
+      self.id_device = Id
       self.in_file_name = InFileName
       self.model_type = ModelType
       self.number_of_devices = NumberOfDevices
-      self.config = {}
-      self.nodes = {}
-      self.data = []
-      self.devices_provision = []
-      self.new_devices = []
-      self.characteristics = []
-      self.load_config()
-      self.device_secrets = []
 
+      # Load the configuration file
+      self.config = {}
+      self.load_config()
+
+      # Symmetric Key
+      self.symmetrickey = SymmetricKey(self.logger)
+
+      # Secrets
+      self.secrets = Secrets(self.logger)
+      self.secrets_cache_data = self.secrets.data
+
+      # meta
+      self.application_uri = None
+      self.namespace = None
+      self.device_capability_model_id = None
+      self.device_capability_model = []
+      self.device_name_prefix = None
+      self.ignore_interface_ids = []
+
+      # Devices Cache
+      self.devices_cache = DevicesCache(self.logger)
+      self.devices_cache_data = self.devices_cache.data
+      self.devices_to_provision = []
+
+    # -------------------------------------------------------------------------------
+    #   Function:   provision_devices
+    #   Usage:      Iterates through all of the nodes in config.json and will create
+    #               a provisioning call to associated a device template to the node
+    #               interface based on the twin, device or gateway pattern
+    # -------------------------------------------------------------------------------
     async def provision_devices(self):
 
       # First up we gather all of the needed provisioning meta-data and secrets
       try:
 
-        # Make a working copy of the cache file
-        devicescache = DevicesCache(self.logger)
-        self.data = devicescache.data
-        print("self.data %s" % self.data)
-        #return
-        #self.data["Devices"] = [x for x in devicescache.data["Devices"] if x["DeviceName"] == "Simulated Device"]
-        self.logger.info("[DEVICES] self.data Count %s" % len(self.data["Devices"]))
+        for pattern in self.config["IoTCentralPatterns"]:
+          if pattern["ModelType"] == self.model_type:
+            self.namespace = pattern["NameSpace"]
+            self.device_capability_model_id = pattern["DeviceCapabilityModelId"]
+            self.device_name_prefix = pattern["DeviceNamePrefix"]
+            self.ignore_interface_ids = pattern["IgnoreInterfaceIds"]
+            break
 
-        # load the secrets
-        secrets = Secrets(self.logger)
-        secrets.init()
+        # this is our working cache for things we provision in this session
+        self.devices_to_provision = self.create_devices_to_provision()
 
-        # Symetric Key for handling Device Specific SaS Keys
-        symmetrickey = SymmetricKey(self.logger)
+        # Specific string formatting based on the device-model-type
+        if self.model_type == "Twins":
+          self.twins_create()
+        elif self.model_type == "Gateways":
+          self.gateways_create()
+        elif self.model_type == "Devices":
+          self.devices_create()
+
+        # Update or Append new Records to the Devices Cache
+        found_device = False
+        for device_to_provision in self.devices_to_provision["Devices"]["Devices"]:
+          index = 0
+          for devices_cache in self.devices_cache_data["Devices"]:
+            found_device = False
+            if devices_cache["Name"] == device_to_provision["Name"]:
+              self.devices_cache_data["Devices"][index] = device_to_provision
+              found_device = True
+              break
+            else:
+              index = index + 1
+          if found_device == False:
+            self.devices_cache_data["Devices"].append(device_to_provision)
+
+        print("*** here ***")
+
+        # Update or Append new Records to the Secrets
+        found_secret = False
+        for device_to_provision in self.devices_to_provision["Secrets"]:
+          index = 0
+          for secrets_cache in self.secrets_cache_data["Devices"]:
+            found_secret = False
+            if secrets_cache["Name"] == device_to_provision["Name"]:
+              self.secrets_cache_data["Devices"][index] = device_to_provision
+              found_secret = True
+              break
+            else:
+              index = index + 1
+          if found_secret == False:
+            self.secrets_cache_data["Devices"].append(device_to_provision)
+
+        print("********************************")
+        print(self.devices_to_provision)
+        print("********************************")
+        print(self.devices_cache_data)
+        print("********************************")
+        print(self.secrets_cache_data)
+
+        self.devices_cache.update_file(self.devices_cache_data)
+        self.secrets.update_file_device_secrets(self.secrets_cache_data["Devices"])
+        return
 
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
-        self.logger.error("[TERMINATING] We encountered an error gathering needed provisioning meta-data and secrets" )
-        return
-
-      # [TWIN] Provisioning
-      # Based upon the type of provisionign we are performing (twin or device), we gather
-      # up all of our meta-data and enumerate to create the devices in IoT Central
-      if (self.model_type == "twin"):
-        try:
-
-          # Gather and Define the DCM Information
-          # Device Id is formatted as [larouex-smart-kitchen-{id}]
-          id_number_str = str(self.iddevice)
-          id_number_str = id_number_str.zfill(3)
-          device_id = self.config["DeviceNameTwin"].format(id=id_number_str)
-
-          dcm_id = self.config["DeviceCapabilityModelId"]
-          device_capability_model = self.create_device_capability_model(device_id, dcm_id)
-          self.logger.info("[DCM ID] %s" % dcm_id)
-          self.logger.info("[DEVICE ID] %s" % device_id)
-          self.logger.info("[DCM] %s" % device_capability_model)
-
-          # Let's Look at the config file and generate
-          # our twin device from the interfaces configuration
-          for node in self.nodes:
-            device_interface = self.create_device_interface(node["Name"], node["InterfacelId"], node["InterfaceInstanceName"])
-            device_capability_model["Interfaces"].append(device_interface)
-            self.logger.info("[INTERFACE] %s" % device_interface)
-
-          # Dump the Device Info
-          self.logger.info("[DEVICE] MODEL %s" % device_capability_model)
-
-          # Get a Device Specific Symetric Key
-          device_symmetrickey = symmetrickey.compute_derived_symmetric_key(device_capability_model["DeviceName"], secrets.get_device_secondary_key())
-          self.logger.info("[SYMETRIC KEY] %s" % device_symmetrickey)
-
-          # Provision the Device
-          self.logger.info("[PROVISIONING] %s" % device_capability_model["DeviceName"])
-
-          # Check if we are in WhatIf and if not, let's provision the device as collective
-          # twin patterm into IoT Central...
-          if not self.whatif:
-
-            self.logger.info("[PROVISIONING HOST]: %s" % secrets.get_provisioning_host())
-
-            # Azure IoT Central SDK Call to create the provisioning_device_client
-            provisioning_device_client = ProvisioningDeviceClient.create_from_symmetric_key(
-              provisioning_host = secrets.get_provisioning_host(),
-              registration_id = device_capability_model["DeviceName"],
-              id_scope = secrets.get_scope_id(),
-              symmetric_key = device_symmetrickey,
-              websockets=True
-            )
-
-            # Azure IoT Central SDK call to set the DCM payload and provision the device
-            provisioning_device_client.provisioning_payload = '{"iotcModelId":"%s"}' % (device_capability_model["DeviceCapabilityModelId"])
-            registration_result = await provisioning_device_client.register()
-            device_capability_model["DeviceName"]
-            self.device_secrets.append(self.create_device_secret(device_capability_model["DeviceName"], registration_result.registration_state.assigned_hub, device_symmetrickey))
-            self.logger.info("[REGISTRATION RESULT] %s" % registration_result)
-
-          self.data["Devices"].append(device_capability_model)
-
-        except Exception as ex:
-          self.logger.error("[ERROR] %s" % ex)
-          self.logger.error("[TERMINATING] We encountered an error provisioning the twin as a device in IoT Central" )
-          return
-
-        # Update the Cache
-        if not self.whatif:
-          devicescache.update_file(self.data)
-          secrets.update_device_secrets(self.device_secrets)
-
-        return
-
-      # [DEVICE] Provisioning
-      # Based upon the type of provisionign we are performing (twin or device), we gather
-      # up all of our meta-data and enumerate to create the devices in IoT Central
-      elif (self.model_type == "device"):
-        try:
-
-          # Let's Look at the config file and generate
-          # our device from the interfaces configuration
-          for node in self.nodes:
-<<<<<<< HEAD
-            
-            # check if we are excluding 
-=======
-
-            # check if we are excluding
->>>>>>> ab7c1046a396566a2e95fc6617baec378eb3c68d
-            if self.config["PerDeviceDeviceIgnoreInterfaceIds"].count(node["InterfacelId"]) == 0:
-
-              # We will enumerate the number of devices we are going to create
-              for x in range(self.number_of_devices):
-
-                # Gather and Define the DCM Information
-                id_number_str = str(int(self.iddevice) + x)
-                id_number_str = id_number_str.zfill(3)
-
-                # Device Id is formatted as [larouex-smart-kitchen-{deviceName}-{id}]
-                device_id = self.config["DeviceNameDevice"].format(deviceName = node["Name"], id=id_number_str)
-
-                # PerDeviceDeviceCapabilityModelId is formatted as [urn:LarouexSmartKitchen:{deviceName}:1]
-                dcm_id = self.config["PerDeviceDeviceCapabilityModelId"].format(deviceName = node["Name"])
-
-                # Get our DCM Instantiated
-                device_capability_model = self.create_device_capability_model(device_id, dcm_id)
-                self.logger.info("[DCM ID] %s" % dcm_id)
-                self.logger.info("[DEVICE ID] %s" % device_id)
-                self.logger.info("[DCM] %s" % device_capability_model)
-
-                device_interface = self.create_device_interface(node["Name"], node["InterfacelId"], node["InterfaceInstanceName"])
-                device_capability_model["Interfaces"].append(device_interface)
-                self.logger.info("[INTERFACE] %s" % device_interface)
-
-                # Dump the Device Info  
-                self.logger.info("[DEVICE] MODEL %s" % device_capability_model)
-                
-                # Get a Device Specific Symetric Key
-                device_symmetrickey = symmetrickey.compute_derived_symmetric_key(device_capability_model["DeviceName"], secrets.get_device_secondary_key())
-                self.logger.info("[SYMETRIC KEY] %s" % device_symmetrickey)
-
-                # Provision the Device
-                self.logger.info("[PROVISIONING] %s" % device_capability_model["DeviceName"])
-            
-                # Check if we are in WhatIf and if not, let's provision the device as collective
-                # twin patterm into IoT Central...
-                if not self.whatif:
-                  
-                  self.logger.info("[PROVISIONING HOST]: %s" % secrets.get_provisioning_host())
-
-                  # Azure IoT Central SDK Call to create the provisioning_device_client
-                  provisioning_device_client = ProvisioningDeviceClient.create_from_symmetric_key(
-                    provisioning_host = secrets.get_provisioning_host(),
-                    registration_id = device_capability_model["DeviceName"],
-                    id_scope = secrets.get_scope_id(),
-                    symmetric_key = device_symmetrickey,
-                    websockets=True
-                  )
-
-                  # Azure IoT Central SDK call to set the DCM payload and provision the device
-                  provisioning_device_client.provisioning_payload = '{"iotcModelId":"%s"}' % (device_capability_model["DeviceCapabilityModelId"])
-                  registration_result = await provisioning_device_client.register()
-                  device_capability_model["DeviceName"]
-                  self.device_secrets.append(self.create_device_secret(device_capability_model["DeviceName"], registration_result.registration_state.assigned_hub, device_symmetrickey))
-                  self.logger.info("[REGISTRATION RESULT] %s" % registration_result)
-
-                try:
-                  device_previous_index = [x for x in devicescache.data["Devices"] if x["DeviceName"] == device_capability_model["DeviceName"]].index()
-                  print("device_previous_index %s" % device_previous_index)
-                  self.data["Devices"][device_previous_index] = device_capability_model
-                except:
-                  self.data["Devices"].append(device_capability_model)
-              
-            else:
-              self.logger.info("[SKIPPING NODE] Included PerDeviceDeviceIgnoreInterfaceIds")
-
-        except Exception as ex:
-          self.logger.error("[ERROR] %s" % ex)
-          self.logger.error("[TERMINATING] We encountered an error provisioning the device as a device in IoT Central" )
-          return
-
-        # Update the Cache
-        if not self.whatif:
-          devicescache.update_file(self.data)
-          secrets.update_device_secrets(self.device_secrets)
+        self.logger.error("[TERMINATING] We encountered an error in CLASS::ProvisionDevices::provision_devices()" )
 
     # -------------------------------------------------------------------------------
     #   Function:   load_config
     #   Usage:      Loads the configuration
     # -------------------------------------------------------------------------------
     def load_config(self):
-      
-      # Load all the configuration
+
       config = Config(self.logger)
       self.config = config.data
-      self.nodes = self.config["Nodes"]
+      return
 
     # -------------------------------------------------------------------------------
-    #   Function:   create_device_interface
+    #   Function:   twins_create
+    #   Usage:      Returns a a Twin pattern for Devices and Secrets
+    # -------------------------------------------------------------------------------
+    def twins_create(self):
+
+      try:
+
+        # We will iterate the number of devices we are going to create
+        for x in range(self.number_of_devices):
+
+          # Define the Device iteration suffix, it is
+          # the base passed number with leading zeros for
+          # a legnth of 3 (1-999) devices
+          id_number_str = str(int(self.id_device) + x)
+          id_number_str = id_number_str.zfill(3)
+
+          device_name = self.device_name_prefix.format(id=id_number_str)
+
+          # The Device Asset scenario appends one interfaces per device id
+          device_capability_model = self.create_device_capability_model(device_name, self.device_capability_model_id)
+
+          # Let's Look at the config file and generate
+          # our device from the interfaces configuration
+          for node in self.config["Nodes"]:
+
+            # check if we are excluding the interface?
+            if self.ignore_interface_ids.count(node["InterfacelId"]) == 0:
+
+              device_capability_model["Interfaces"].append(self.create_device_interface(node["Name"], node["InterfacelId"], node["InterfaceInstanceName"]))
+
+          self.devices_to_provision["Devices"]["Devices"].append(device_capability_model)
+          self.devices_to_provision["Secrets"].append(self.create_device_secret(device_name))
+
+      except Exception as ex:
+        self.logger.error("[ERROR] %s" % ex)
+        self.logger.error("[TERMINATING] We encountered an error in CLASS::ProvisionDevices::devices_create()" )
+
+      return
+
+    # -------------------------------------------------------------------------------
+    #   Function:   gateways_create
+    #   Usage:      Returns a a Gateway pattern for Devices and Secrets
+    # -------------------------------------------------------------------------------
+    def gateways_create(self):
+
+      return
+
+    # -------------------------------------------------------------------------------
+    #   Function:   devices_create
     #   Usage:      Returns a Device Interface for Interfaces Array
     # -------------------------------------------------------------------------------
-    def create_device_capability_model(self, deviceName, id):
+    def devices_create(self):
+
+      try:
+
+        # Let's Look at the config file and generate
+        # our device from the interfaces configuration
+        for node in self.config["Nodes"]:
+
+          device_capability_model_id = self.device_capability_model_id.format(interfaceName=node["Name"])
+
+          # check if we are excluding the interface?
+          if self.ignore_interface_ids.count(node["InterfacelId"]) == 0:
+
+            # We will iterate the number of devices we are going to create
+            for x in range(self.number_of_devices):
+
+              # Define the Device iteration suffix, it is
+              # the base passed number with leading zeros for
+              # a legnth of 3 (1-999) devices
+              id_number_str = str(int(self.id_device) + x)
+              id_number_str = id_number_str.zfill(3)
+
+              device_name = self.device_name_prefix.format(nodeName=node["Name"], id=id_number_str)
+
+              # The Device Asset scenario appends one interfaces per device id
+              device_capability_model = self.create_device_capability_model(device_name, device_capability_model_id)
+              device_capability_model["Interfaces"].append(self.create_device_interface(node["Name"], node["InterfacelId"], node["InterfaceInstanceName"]))
+
+              self.devices_to_provision["Devices"]["Devices"].append(device_capability_model)
+              self.devices_to_provision["Secrets"].append(self.create_device_secret(device_name))
+
+      except Exception as ex:
+        self.logger.error("[ERROR] %s" % ex)
+        self.logger.error("[TERMINATING] We encountered an error in CLASS::ProvisionDevices::devices_create()" )
+
+      return
+
+    # -------------------------------------------------------------------------------
+    #   Function:   create_devices_to_provision
+    #   Usage:      Returns a Devices Array
+    # -------------------------------------------------------------------------------
+    def create_devices_to_provision(self):
+      newDeviceToProvisionArray = {
+        "Devices": {
+          "Devices": [
+          ]
+        }
+        ,
+        "Secrets": [
+        ]
+      }
+      return newDeviceToProvisionArray
+
+    # -------------------------------------------------------------------------------
+    #   Function:   create_device_capability_model
+    #   Usage:      Returns a Device Interface with the  Interfaces Array
+    # -------------------------------------------------------------------------------
+    def create_device_capability_model(self, DeviceName, DeviceCapabilityModelId):
       newDeviceCapabilityModel = {
-        "DeviceName": deviceName,
+        "Name": DeviceName,
         "DeviceType": self.model_type,
-        "DeviceCapabilityModelId": id,
+        "DeviceCapabilityModelId": DeviceCapabilityModelId,
         "Interfaces": [
         ],
         "LastProvisioned": str(datetime.datetime.now())
@@ -271,17 +278,19 @@ class ProvisionDevices():
         "InterfacelId": id,
         "InterfaceInstanceName": instantName
       }
-      return newInterface 
+      return newInterface
 
     # -------------------------------------------------------------------------------
-    #   Function:   create_device_interface
+    #   Function:   create_device_secret
     #   Usage:      Returns a Device Interface for Interfaces Array
     # -------------------------------------------------------------------------------
-    def create_device_secret(self, name, assigned_hub, device_symmetric_key):
+    def create_device_secret(self, name):
       newDeviceSecret = {
         "Name": name,
-        "AssignedHub": assigned_hub,
-        "DeviceSymmetricKey": device_symmetric_key
+        "DeviceType": self.model_type,
+        "AssignedHub": "",
+        "DeviceSymmetricKey": self.symmetrickey.compute_derived_symmetric_key(name, self.secrets.get_device_secondary_key()),
+        "LastProvisioned": str(datetime.datetime.now())
       }
-      return newDeviceSecret 
+      return newDeviceSecret
 

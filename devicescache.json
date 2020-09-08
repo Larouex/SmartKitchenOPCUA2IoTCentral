@@ -1,8 +1,8 @@
 {
   "Devices": [
     {
-      "DeviceName": "larouex-smart-kitchen-001",
-      "DeviceType": "twin",
+      "Name": "larouex-smart-kitchen-001",
+      "DeviceType": "Twins",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Server:1",
       "Interfaces": [
         {
@@ -51,11 +51,11 @@
           "InterfaceInstanceName": "DishwasherInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:06:05.459914"
+      "LastProvisioned": "2020-09-07 19:09:54.102826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-HVAC-001",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-HVAC-001",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
       "Interfaces": [
         {
@@ -64,11 +64,11 @@
           "InterfaceInstanceName": "HVACInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:20.905872"
+      "LastProvisioned": "2020-09-07 19:10:02.958825"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-HVAC-002",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-HVAC-002",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
       "Interfaces": [
         {
@@ -77,11 +77,11 @@
           "InterfaceInstanceName": "HVACInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:23.202924"
+      "LastProvisioned": "2020-09-07 19:10:03.005827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-HVAC-003",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-HVAC-003",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
       "Interfaces": [
         {
@@ -90,11 +90,11 @@
           "InterfaceInstanceName": "HVACInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:25.489715"
+      "LastProvisioned": "2020-09-07 19:10:03.072828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-HVAC-004",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-HVAC-004",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
       "Interfaces": [
         {
@@ -103,11 +103,11 @@
           "InterfaceInstanceName": "HVACInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:27.770626"
+      "LastProvisioned": "2020-09-07 19:10:03.090826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-HVAC-005",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-HVAC-005",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
       "Interfaces": [
         {
@@ -116,11 +116,11 @@
           "InterfaceInstanceName": "HVACInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:29.993656"
+      "LastProvisioned": "2020-09-07 19:10:03.090826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFridge-001",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFridge-001",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
         {
@@ -129,11 +129,11 @@
           "InterfaceInstanceName": "WalkinFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:32.276230"
+      "LastProvisioned": "2020-09-07 19:10:03.091827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFridge-002",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFridge-002",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
         {
@@ -142,11 +142,11 @@
           "InterfaceInstanceName": "WalkinFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:34.591438"
+      "LastProvisioned": "2020-09-07 19:10:03.115829"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFridge-003",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFridge-003",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
         {
@@ -155,11 +155,11 @@
           "InterfaceInstanceName": "WalkinFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:36.834894"
+      "LastProvisioned": "2020-09-07 19:10:03.130828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFridge-004",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFridge-004",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
         {
@@ -168,11 +168,11 @@
           "InterfaceInstanceName": "WalkinFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:39.065561"
+      "LastProvisioned": "2020-09-07 19:10:03.130828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFridge-005",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFridge-005",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
         {
@@ -181,11 +181,11 @@
           "InterfaceInstanceName": "WalkinFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:41.387933"
+      "LastProvisioned": "2020-09-07 19:10:03.131826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFreezer-001",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFreezer-001",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
         {
@@ -194,11 +194,11 @@
           "InterfaceInstanceName": "WalkinFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:43.650202"
+      "LastProvisioned": "2020-09-07 19:10:03.131826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFreezer-002",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFreezer-002",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
         {
@@ -207,11 +207,11 @@
           "InterfaceInstanceName": "WalkinFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:45.893328"
+      "LastProvisioned": "2020-09-07 19:10:03.132826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFreezer-003",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFreezer-003",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
         {
@@ -220,11 +220,11 @@
           "InterfaceInstanceName": "WalkinFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:48.130281"
+      "LastProvisioned": "2020-09-07 19:10:03.132826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFreezer-004",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFreezer-004",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
         {
@@ -233,11 +233,11 @@
           "InterfaceInstanceName": "WalkinFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:50.366290"
+      "LastProvisioned": "2020-09-07 19:10:03.146826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-WalkinFreezer-005",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-WalkinFreezer-005",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
         {
@@ -246,11 +246,11 @@
           "InterfaceInstanceName": "WalkinFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:52.660242"
+      "LastProvisioned": "2020-09-07 19:10:03.146826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Fryer-001",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Fryer-001",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
         {
@@ -259,11 +259,11 @@
           "InterfaceInstanceName": "FryerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:54.875196"
+      "LastProvisioned": "2020-09-07 19:10:03.149827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Fryer-002",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Fryer-002",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
         {
@@ -272,11 +272,11 @@
           "InterfaceInstanceName": "FryerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:57.111352"
+      "LastProvisioned": "2020-09-07 19:10:03.158827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Fryer-003",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Fryer-003",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
         {
@@ -285,11 +285,11 @@
           "InterfaceInstanceName": "FryerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:09:59.341859"
+      "LastProvisioned": "2020-09-07 19:10:03.159827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Fryer-004",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Fryer-004",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
         {
@@ -298,11 +298,11 @@
           "InterfaceInstanceName": "FryerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:01.632943"
+      "LastProvisioned": "2020-09-07 19:10:03.159827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Fryer-005",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Fryer-005",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
         {
@@ -311,11 +311,11 @@
           "InterfaceInstanceName": "FryerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:03.889270"
+      "LastProvisioned": "2020-09-07 19:10:03.160827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFridge-001",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFridge-001",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
         {
@@ -324,11 +324,11 @@
           "InterfaceInstanceName": "StandingFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:06.146690"
+      "LastProvisioned": "2020-09-07 19:10:03.160827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFridge-002",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFridge-002",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
         {
@@ -337,11 +337,11 @@
           "InterfaceInstanceName": "StandingFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:08.397919"
+      "LastProvisioned": "2020-09-07 19:10:03.172828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFridge-003",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFridge-003",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
         {
@@ -350,11 +350,11 @@
           "InterfaceInstanceName": "StandingFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:10.637957"
+      "LastProvisioned": "2020-09-07 19:10:03.173828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFridge-004",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFridge-004",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
         {
@@ -363,11 +363,11 @@
           "InterfaceInstanceName": "StandingFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:12.893127"
+      "LastProvisioned": "2020-09-07 19:10:03.174828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFridge-005",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFridge-005",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
         {
@@ -376,11 +376,11 @@
           "InterfaceInstanceName": "StandingFridgeInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:15.131585"
+      "LastProvisioned": "2020-09-07 19:10:03.174828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFreezer-001",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFreezer-001",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
         {
@@ -389,11 +389,11 @@
           "InterfaceInstanceName": "StandingFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:17.370280"
+      "LastProvisioned": "2020-09-07 19:10:03.205829"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFreezer-002",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFreezer-002",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
         {
@@ -402,11 +402,11 @@
           "InterfaceInstanceName": "StandingFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:19.611481"
+      "LastProvisioned": "2020-09-07 19:10:03.227826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFreezer-003",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFreezer-003",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
         {
@@ -415,11 +415,11 @@
           "InterfaceInstanceName": "StandingFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:21.857222"
+      "LastProvisioned": "2020-09-07 19:10:03.229827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFreezer-004",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFreezer-004",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
         {
@@ -428,11 +428,11 @@
           "InterfaceInstanceName": "StandingFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:24.149704"
+      "LastProvisioned": "2020-09-07 19:10:03.229827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-StandingFreezer-005",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-StandingFreezer-005",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
         {
@@ -441,11 +441,11 @@
           "InterfaceInstanceName": "StandingFreezerInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:26.386711"
+      "LastProvisioned": "2020-09-07 19:10:03.231827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-ColdTable-001",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-ColdTable-001",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
         {
@@ -454,11 +454,11 @@
           "InterfaceInstanceName": "ColdTableInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:28.568719"
+      "LastProvisioned": "2020-09-07 19:10:03.243826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-ColdTable-002",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-ColdTable-002",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
         {
@@ -467,11 +467,11 @@
           "InterfaceInstanceName": "ColdTableInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:30.854606"
+      "LastProvisioned": "2020-09-07 19:10:03.243826"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-ColdTable-003",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-ColdTable-003",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
         {
@@ -480,11 +480,11 @@
           "InterfaceInstanceName": "ColdTableInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:33.087361"
+      "LastProvisioned": "2020-09-07 19:10:03.257827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-ColdTable-004",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-ColdTable-004",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
         {
@@ -493,11 +493,11 @@
           "InterfaceInstanceName": "ColdTableInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:35.362115"
+      "LastProvisioned": "2020-09-07 19:10:03.257827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-ColdTable-005",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-ColdTable-005",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
         {
@@ -506,11 +506,11 @@
           "InterfaceInstanceName": "ColdTableInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:37.673087"
+      "LastProvisioned": "2020-09-07 19:10:03.259828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Dishwasher-001",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Dishwasher-001",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
         {
@@ -519,11 +519,11 @@
           "InterfaceInstanceName": "DishwasherInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:39.905552"
+      "LastProvisioned": "2020-09-07 19:10:03.270828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Dishwasher-002",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Dishwasher-002",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
         {
@@ -532,11 +532,11 @@
           "InterfaceInstanceName": "DishwasherInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:42.196326"
+      "LastProvisioned": "2020-09-07 19:10:03.270828"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Dishwasher-003",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Dishwasher-003",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
         {
@@ -545,11 +545,11 @@
           "InterfaceInstanceName": "DishwasherInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:44.474174"
+      "LastProvisioned": "2020-09-07 19:10:03.271827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Dishwasher-004",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Dishwasher-004",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
         {
@@ -558,11 +558,11 @@
           "InterfaceInstanceName": "DishwasherInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:46.766502"
+      "LastProvisioned": "2020-09-07 19:10:03.271827"
     },
     {
-      "DeviceName": "larouex-smart-kitchen-Dishwasher-005",
-      "DeviceType": "device",
+      "Name": "larouex-smart-kitchen-Dishwasher-005",
+      "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
         {
@@ -571,7 +571,7 @@
           "InterfaceInstanceName": "DishwasherInterface"
         }
       ],
-      "LastProvisioned": "2020-08-31 23:10:49.022893"
+      "LastProvisioned": "2020-09-07 19:10:03.283827"
     }
   ]
 }

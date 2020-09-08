@@ -12,9 +12,6 @@
 import json, sys, time, string, threading, asyncio, os, copy
 import logging
 
-# For dumping and Loading Address Space option
-from pathlib import Path
-
 # opcua
 from asyncua import Client, Node, ua
 
@@ -25,6 +22,7 @@ from azure.iot.device import MethodResponse
 
 # our classes
 from Classes.config import Config
+from Classes.secrets import Secrets
 from Classes.maptelemetry import MapTelemetry
 from Classes.varianttype import VariantType
 from Classes.deviceclient import DeviceClient
@@ -43,7 +41,7 @@ class Gateway():
 
       # Device Information
       self.devices_cache = []
-      self.load_devices_cache()
+      self.load_devicescache()
 
       # Map Telemetry
       self.map_telemetry = []
@@ -52,96 +50,116 @@ class Gateway():
       self.telemetry_dict = {}
 
       # Azure Device
-      self.device_client = None
+      self.telemetry_loop = {}
+      self.device_client = {}
 
     # -------------------------------------------------------------------------------
-    #   Function:   start
+    #   Function:   run
     #   Usage:      The start function loads configuration and starts the OPC Server
     # -------------------------------------------------------------------------------
-    async def start(self):
+    async def loop_telemtery(self, DeviceClient):
+
+      return
+
+    # -------------------------------------------------------------------------------
+    #   Function:   run
+    #   Usage:      The start function loads configuration and starts the OPC Server
+    # -------------------------------------------------------------------------------
+    async def run(self):
 
       # Gateway Loop
       try:
-        
-        device_client = DeviceClient(self.logger, self.devices_cache["DefaultDeviceName"])
-        await device_client.connect()
-        self.logger.info("[CONNECTING IOT CENTRAL] %s" % self.device_client)
+
+        # Create a dictionary of loops
+
+        for device in self.map_telemetry["Devices"]:
+
+          self.device_client(device["DeviceName"]) = DeviceClient(self.logger, device["DeviceName"])
+          await self.device_client(device["DeviceName"]).connect()
+          self.telemetry_loop(device["DeviceName"]) = asyncio.create_task(loop_telemtery(self.device_client(device["DeviceName"]),))
 
         # configure the endpoint
         url = self.config["ClientUrlPattern"].format(port = self.config["Port"])
-        self.logger.info("[SEEKING ENDPOINT] %s" % url)
+        self.logger.info("[GATEWAY] SEEKING ENDPOINT %s" % url)
 
         async with Client(url=url) as client:
-          
-          name_space_index = await client.get_namespace_index(self.map_telemetry["NameSpace"])
-          self.logger.info("[NAMESPACE NAME] %s" % self.map_telemetry["NameSpace"])
-          self.logger.info("[NAMESPACE INDEX] %s" % name_space_index)
-          self.logger.info("[PREPARING TO READ TELEMETRY IN SECONDS] %s" % self.config["ClientFrequencyInSeconds"])
 
           while True:
+
             await asyncio.sleep(self.config["ClientFrequencyInSeconds"])
 
-            for node in self.map_telemetry["Nodes"]:
-              self.logger.info("[NODE NAME] %s" % node["Name"])
-              self.telemetry_dict = {}
-              for variable in node["Variables"]:
-                read_node = client.get_node(variable["NodeId"])
-                val = await read_node.get_value()
-                log_msg = "[TELEMETRY] NAME: {tn} VALUE: {val} NODE ID: {ni} DISPLAY NAME: {dn}"
-                self.logger.info(log_msg.format(tn = variable["TelemetryName"], val = val, ni = variable["NodeId"], dn = variable["DisplayName"]))
-                self.telemetry_dict[variable["TelemetryName"]] = val
-                self.logger.info("[DICTIONARY] %s" % self.telemetry_dict)
+            for device in self.map_telemetry["Devices"]:
 
-              await device_client.send_telemetry(self.telemetry_dict, node["InterfacelId"], node["InterfaceInstanceName"])
+              # Set device client from Azure IoT SDK and connect
+              device_client = DeviceClient(self.logger, device["DeviceName"])
+              await device_client.connect()
+              self.logger.info("[GATEWAY] CONNECTING IOT CENTRAL: %s" % device_client)
+
+              for interface in device["Interfaces"]:
+
+                self.logger.info("[GATEWAY] InterfacelId: %s" % interface["InterfacelId"])
+                self.logger.info("[GATEWAY] InterfaceInstanceName: %s" % interface["InterfaceInstanceName"])
+
+                self.telemetry_dict = {}
+
+                for variable in interface["Variables"]:
+
+                  read_node = client.get_node(variable["NodeId"])
+                  val = await read_node.get_value()
+                  log_msg = "[GATEWAY] TELEMETRY: *NAME: {tn} *VALUE: {val} *NODE ID: {ni} *DISPLAY NAME: {dn}"
+                  self.logger.info(log_msg.format(tn = variable["TelemetryName"], val = val, ni = variable["NodeId"], dn = variable["DisplayName"]))
+
+                  # Assign variable name and value to dictionary
+                  self.telemetry_dict[variable["TelemetryName"]] = val
+                  self.logger.info("[GATEWAY] DICTIONARY: %s" % self.telemetry_dict)
+
+                self.logger.info("[GATEWAY] SENDING PAYLOAD IOT CENTRAL")
+                await device_client.send_telemetry(self.telemetry_dict, interface["InterfacelId"], interface["InterfaceInstanceName"])
+                self.logger.info("[GATEWAY] SUCCESS")
 
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
         self.logger.error("[TERMINATING] We encountered an error in Gateway" )
         return
-        
+
       finally:
           await client.disconnect()
           self.device_client = None
-          device_client.disconnect()
-    
+          #self.device_client.disconnect()
+
       return
 
     # -------------------------------------------------------------------------------
     #   Function:   load_config
-    #   Usage:      Loads the configuration from file and setup iterators for
-    #               sending telemetry in sequence
+    #   Usage:      Loads the configuration from file
     # -------------------------------------------------------------------------------
     def load_config(self):
-      
-      # Load all the configuration
+
       config = Config(self.logger)
       self.config = config.data
-      self.nodes = self.config["Nodes"]
       return
-    
+
+    # -------------------------------------------------------------------------------
+    #   Function:   load_devicescache
+    #   Usage:      Loads the Devices that have been registered and provisioned.
+    #               This file is generated from the as-is state of the system
+    #               when the OpcUaServer is started.
+    # -------------------------------------------------------------------------------
+    def load_devicescache(self):
+
+      devicescache = DevicesCache(self.logger)
+      self.devicescache = devicescache.data
+      return
+
     # -------------------------------------------------------------------------------
     #   Function:   load_map_telemetry
     #   Usage:      Loads the Map Telemetry File that Maps Telemtry for Azure
     #               Iot Central to the Node Id's for the Opc Server.
     # -------------------------------------------------------------------------------
     def load_map_telemetry(self):
-      
+
       # Load all the map
       map_telemetry = MapTelemetry(self.logger)
       map_telemetry.load_file()
       self.map_telemetry = map_telemetry.data
       return
-
-    # -------------------------------------------------------------------------------
-    #   Function:   load_devices_cache
-    #   Usage:      Loads the Device Cache Information and Configuration
-    # -------------------------------------------------------------------------------
-    def load_devices_cache(self):
-      
-      # Load Device Cache
-      devices_cache = DevicesCache(self.logger)
-      self.devices_cache = devices_cache.data
-      return
-
-      
-
