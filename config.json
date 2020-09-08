@@ -35,9 +35,10 @@
     {
       "ModelType": "Gateways",
       "NameSpace": "larouex-smart-kitchen-gateways",
-      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Gateway:{interfaceName}:1",
-      "DeviceNamePrefix": "larouex-smart-kitchen-{gatewayName}-{id}",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:{interfaceName}:1",
+      "DeviceNamePrefix": "{nodeName}{id}",
       "IgnoreInterfaceIds": [
+        "urn:larouexsmartkitchen:AmbientInterface:1"
       ]
     },
     {

@@ -7,7 +7,7 @@
 #   Online: www.hackinmakin.com
 #
 #   (c) 2020 Larouex Software Design LLC
-#   This code is licensed under MIT license (see LICENSE.txt for details)    
+#   This code is licensed under MIT license (see LICENSE.txt for details)
 # ==================================================================================
 import json
 import logging
@@ -27,7 +27,7 @@ class MapTelemetry():
     def update_file(self, data):
         self.data = data
         with open('maptelemetry.json', 'w') as config_file:
-            alerts = self.load_alerts() 
+            alerts = self.load_alerts()
             config_file.write(json.dumps(data, indent=2))
             self.logger.debug(alerts["Alerts"]["MapTelemetry"]["Updated"].format(self.data))
 

@@ -24,7 +24,6 @@ from Classes.config import Config
 async def provision_devices(Id, InFileName, ModelType, NumberOfDevices):
 
   provisiondevices = ProvisionDevices(Log, Id, InFileName, ModelType, NumberOfDevices)
-  print("HERE HERE")
   await provisiondevices.provision_devices()
   return True
 

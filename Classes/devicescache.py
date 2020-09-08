@@ -21,12 +21,12 @@ class DevicesCache():
         with open('devicescache.json') as config_file:
             self.data = json.load(config_file)
             alerts = self.load_alerts()
-            self.logger.info(alerts["Alerts"]["DevicesCache"]["Loaded"].format(self.data))
+            self.logger.debug(alerts["Alerts"]["DevicesCache"]["Loaded"].format(self.data))
 
     def update_file(self, data):
         with open('devicescache.json', 'w') as configs_file:
             alerts = self.load_alerts()
-            self.logger.info(alerts["Alerts"]["DevicesCache"]["Updated"].format(self.data))
+            self.logger.debug(alerts["Alerts"]["DevicesCache"]["Updated"].format(self.data))
             configs_file.write(json.dumps(data, indent=2))
 
     def load_alerts(self):

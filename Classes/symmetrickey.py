@@ -21,8 +21,6 @@ class SymmetricKey():
     # derives a symmetric device key for a device id
     # using the group symmetric key
     def compute_derived_symmetric_key(self, device_id, symmetric_key):
-        print(device_id)
-        print(symmetric_key)
         try:
             message = device_id.encode("utf-8")
             signing_key = base64.b64decode(symmetric_key.encode("utf-8"))

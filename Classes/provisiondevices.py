@@ -74,7 +74,6 @@ class ProvisionDevices():
       # First up we gather all of the needed provisioning meta-data and secrets
       try:
 
-        print("here")
         for pattern in self.config["IoTCentralPatterns"]:
           if pattern["ModelType"] == self.model_type:
             self.namespace = pattern["NameSpace"]
@@ -93,6 +92,10 @@ class ProvisionDevices():
           self.gateways_create()
         elif self.model_type == "Devices":
           self.devices_create()
+
+        print("********************************")
+        print("DEVICES TO PROVISION: %s" % self.devices_to_provision)
+        print("********************************")
 
         # Update or Append new Records to the Devices Cache
         found_device = False
@@ -143,11 +146,8 @@ class ProvisionDevices():
             self.secrets_cache_data["Devices"].append(device_to_provision)
 
         print("********************************")
-        print(self.devices_to_provision)
+        print("DEVICES TO PROVISION: %s" % self.devices_to_provision)
         print("********************************")
-        print(self.devices_cache_data)
-        print("********************************")
-        print(self.secrets_cache_data)
 
         self.devices_cache.update_file(self.devices_cache_data)
         self.secrets.update_file_device_secrets(self.secrets_cache_data["Devices"])
@@ -210,7 +210,40 @@ class ProvisionDevices():
     #   Function:   gateways_create
     #   Usage:      Returns a a Gateway pattern for Devices and Secrets
     # -------------------------------------------------------------------------------
-    async def gateways_create(self):
+    def gateways_create(self):
+
+      try:
+
+        # Let's Look at the config file and generate
+        # our device from the interfaces configuration
+        for node in self.config["Nodes"]:
+
+          device_capability_model_id = self.device_capability_model_id.format(interfaceName=node["Name"])
+
+          # check if we are excluding the interface?
+          if self.ignore_interface_ids.count(node["InterfacelId"]) == 0:
+
+            # We will iterate the number of devices we are going to create
+            for x in range(self.number_of_devices):
+
+              # Define the Device iteration suffix, it is
+              # the base passed number with leading zeros for
+              # a legnth of 3 (1-999) devices
+              id_number_str = str(int(self.id_device) + x)
+              id_number_str = id_number_str.zfill(3)
+
+              device_name = self.device_name_prefix.format(nodeName=node["Name"], id=id_number_str)
+
+              # The Device Asset scenario appends one interfaces per device id
+              device_capability_model = self.create_device_capability_model(device_name, device_capability_model_id)
+              device_capability_model["Interfaces"].append(self.create_device_interface(node["Name"], node["InterfacelId"], node["InterfaceInstanceName"]))
+
+              self.devices_to_provision["Devices"]["Devices"].append(device_capability_model)
+              self.devices_to_provision["Secrets"].append(self.create_device_connection(device_name, device_capability_model_id))
+
+      except Exception as ex:
+        self.logger.error("[ERROR] %s" % ex)
+        self.logger.error("[TERMINATING] We encountered an error in CLASS::ProvisionDevices::devices_create()" )
 
       return
 
@@ -247,7 +280,7 @@ class ProvisionDevices():
               device_capability_model["Interfaces"].append(self.create_device_interface(node["Name"], node["InterfacelId"], node["InterfaceInstanceName"]))
 
               self.devices_to_provision["Devices"]["Devices"].append(device_capability_model)
-              self.devices_to_provision["Secrets"].append(self.create_device_connection(device_name, self.device_capability_model_id))
+              self.devices_to_provision["Secrets"].append(self.create_device_connection(device_name, device_capability_model_id))
 
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
