@@ -31,6 +31,7 @@ class ProvisionDevices():
     dcm_value = None
 
     def __init__(self, Log, Id, InFileName, ModelType, NumberOfDevices):
+
       self.logger = Log
       self.id_device = Id
       self.in_file_name = InFileName
@@ -61,6 +62,7 @@ class ProvisionDevices():
       self.devices_cache_data = self.devices_cache.data
       self.devices_to_provision = []
 
+
     # -------------------------------------------------------------------------------
     #   Function:   provision_devices
     #   Usage:      Iterates through all of the nodes in config.json and will create
@@ -72,6 +74,7 @@ class ProvisionDevices():
       # First up we gather all of the needed provisioning meta-data and secrets
       try:
 
+        print("here")
         for pattern in self.config["IoTCentralPatterns"]:
           if pattern["ModelType"] == self.model_type:
             self.namespace = pattern["NameSpace"]
@@ -106,11 +109,27 @@ class ProvisionDevices():
           if found_device == False:
             self.devices_cache_data["Devices"].append(device_to_provision)
 
-        print("*** here ***")
 
         # Update or Append new Records to the Secrets
         found_secret = False
         for device_to_provision in self.devices_to_provision["Secrets"]:
+
+          # Azure IoT Central SDK Call to create the provisioning_device_client
+          provisioning_device_client = ProvisioningDeviceClient.create_from_symmetric_key(
+            provisioning_host = self.secrets.get_provisioning_host(),
+            registration_id = device_to_provision["Name"],
+            id_scope = self.secrets.get_scope_id(),
+            symmetric_key = device_to_provision["DeviceSymmetricKey"],
+            websockets=True
+          )
+
+          # Azure IoT Central SDK call to set the DCM payload and provision the device
+          provisioning_device_client.provisioning_payload = '{"iotcModelId":"%s"}' % (device_to_provision["DeviceCapabilityModelId"])
+          registration_result = await provisioning_device_client.register()
+          self.logger.info("[REGISTRATION RESULT] %s" % registration_result)
+          self.logger.info("[device_symmetrickey] %s" % device_to_provision["DeviceSymmetricKey"])
+          device_to_provision["AssignedHub"] = registration_result.registration_state.assigned_hub
+
           index = 0
           for secrets_cache in self.secrets_cache_data["Devices"]:
             found_secret = False
@@ -176,11 +195,10 @@ class ProvisionDevices():
 
             # check if we are excluding the interface?
             if self.ignore_interface_ids.count(node["InterfacelId"]) == 0:
-
               device_capability_model["Interfaces"].append(self.create_device_interface(node["Name"], node["InterfacelId"], node["InterfaceInstanceName"]))
 
           self.devices_to_provision["Devices"]["Devices"].append(device_capability_model)
-          self.devices_to_provision["Secrets"].append(self.create_device_secret(device_name))
+          self.devices_to_provision["Secrets"].append(self.create_device_connection(device_name, self.device_capability_model_id))
 
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
@@ -192,7 +210,7 @@ class ProvisionDevices():
     #   Function:   gateways_create
     #   Usage:      Returns a a Gateway pattern for Devices and Secrets
     # -------------------------------------------------------------------------------
-    def gateways_create(self):
+    async def gateways_create(self):
 
       return
 
@@ -229,7 +247,7 @@ class ProvisionDevices():
               device_capability_model["Interfaces"].append(self.create_device_interface(node["Name"], node["InterfacelId"], node["InterfaceInstanceName"]))
 
               self.devices_to_provision["Devices"]["Devices"].append(device_capability_model)
-              self.devices_to_provision["Secrets"].append(self.create_device_secret(device_name))
+              self.devices_to_provision["Secrets"].append(self.create_device_connection(device_name, self.device_capability_model_id))
 
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
@@ -272,24 +290,29 @@ class ProvisionDevices():
     #   Function:   create_device_interface
     #   Usage:      Returns a Device Interface for Interfaces Array
     # -------------------------------------------------------------------------------
-    def create_device_interface(self, name, id, instantName):
+    def create_device_interface(self, name, Id, instantName):
       newInterface = {
         "Name": name,
-        "InterfacelId": id,
+        "InterfacelId": Id,
         "InterfaceInstanceName": instantName
       }
       return newInterface
 
     # -------------------------------------------------------------------------------
-    #   Function:   create_device_secret
+    #   Function:   create_device_connection
     #   Usage:      Returns a Device Interface for Interfaces Array
     # -------------------------------------------------------------------------------
-    def create_device_secret(self, name):
+    def create_device_connection(self, Name, DeviceCapabilityModelId):
+
+      # Get device symmetric key
+      device_symmetric_key = self.symmetrickey.compute_derived_symmetric_key(Name, self.secrets.get_device_secondary_key())
+
       newDeviceSecret = {
-        "Name": name,
+        "Name": Name,
+        "DeviceCapabilityModelId": DeviceCapabilityModelId,
         "DeviceType": self.model_type,
         "AssignedHub": "",
-        "DeviceSymmetricKey": self.symmetrickey.compute_derived_symmetric_key(name, self.secrets.get_device_secondary_key()),
+        "DeviceSymmetricKey": device_symmetric_key,
         "LastProvisioned": str(datetime.datetime.now())
       }
       return newDeviceSecret

@@ -6,10 +6,11 @@
   "ServerDiscoveryName": "Larouex Smart Kitchen Server",
   "Description": "Larouex Smart Kitchen LLC. Advanced Automation and Monitoring of Commercial Kitchens.",
   "ApplicationUri": "urn:LarouexSmartKitchen:Server",
+  "NameSpace": "larouex-smart-kitchen",
   "DeviceInstanceCount": 10,
 	"CacheAddrSpaceFileName": "cache.opc",
-	"ServerFrequencyInSeconds": 30,
-  "ClientFrequencyInSeconds": 45,
+	"ServerFrequencyInSeconds": 60,
+  "ClientFrequencyInSeconds": 65,
   "TelemetryRings": [
     {"Ring0": 15},
     {"Ring1": 20},

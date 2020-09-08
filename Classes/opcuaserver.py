@@ -34,6 +34,7 @@ class OpcUaServer():
 
       # Namespaces
       self.opcua_id_namespace_twins = None
+      self.opcua_id_namespace_gateways = None
       self.opcua_id_namespace_devices = None
 
       # Load configuration
@@ -52,6 +53,15 @@ class OpcUaServer():
       self.map_telemetry_devices = []
       self.map_telemetry_interfaces = []
       self.map_telemetry_interfaces_variables = []
+
+      # meta
+      self.application_uri = None
+      self.namespace = None
+      self.device_capability_model_id = None
+      self.device_capability_model = []
+      self.device_name_prefix = None
+      self.ignore_interface_ids = []
+
 
 
     # -------------------------------------------------------------------------------
@@ -126,17 +136,23 @@ class OpcUaServer():
         self.logger.info("[SERVER CONFIG] APPLICATION NAME: %s" % self.config["ServerDiscoveryName"])
 
         # Set NameSpace(s)
-        self.opcua_id_namespace_twins = await self.opcua_server_instance.register_namespace(self.config["NameSpaceTwins"])
-        self.opcua_id_namespace_devices = await self.opcua_server_instance.register_namespace(self.config["NameSpaceDevices"])
+        for pattern in self.config["IoTCentralPatterns"]:
+          if pattern["ModelType"] == "Twins":
+            self.opcua_id_namespace_twins = await self.opcua_server_instance.register_namespace(pattern["NameSpace"])
+          if pattern["ModelType"] == "Gateways":
+            self.opcua_id_namespace_gateways = await self.opcua_server_instance.register_namespace(pattern["NameSpace"])
+          if pattern["ModelType"] == "Devices":
+            self.opcua_id_namespace_devices = await self.opcua_server_instance.register_namespace(pattern["NameSpace"])
 
         self.logger.info("[SERVER CONFIG] NAMESPACE TWINS: %s" % self.opcua_id_namespace_twins)
+        self.logger.info("[SERVER CONFIG] NAMESPACE TWINS: %s" % self.opcua_id_namespace_gateways)
         self.logger.info("[SERVER CONFIG] NAMESPACE DEVICES: %s" % self.opcua_id_namespace_devices)
-
-        return
 
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
         self.logger.error("[TERMINATING] We encountered an error in OPCUA Server Setup::setup()" )
+
+      return
 
     # -------------------------------------------------------------------------------
     #   Function:   load_nodes_from_devicecache
@@ -150,11 +166,9 @@ class OpcUaServer():
       # OPCUA Server Setup
       try:
 
-        self.logger.info("[SERVER] STARTING load_nodes_from_devicecache()")
-
         # Setup root for map telemetry configuration file
-        self.map_telemetry = self.create_map_telemetry_root(self.config["NameSpace"])
         self.logger.info("[SERVER] INITIATED MAP TELEMETRY FILE: %s" % self.map_telemetry)
+        self.map_telemetry = self.create_map_telemetry_root(self.config["NameSpace"])
 
         # Data Type Mappings (OPCUA Datatypes to IoT Central Datatypes)
         variant_type = VariantType(self.logger)
@@ -163,24 +177,26 @@ class OpcUaServer():
         for device in self.devicescache["Devices"]:
 
           self.logger.info("[SERVER] DEVICE TYPE: %s" % device["DeviceType"])
-          self.logger.info("[SERVER] DEVICE NAME: %s" % device["DeviceName"])
+          self.logger.info("[SERVER] DEVICE NAME: %s" % device["Name"])
 
           # DEVICE PER NODE
           namespace_id = None
 
-          if device["DeviceType"] == "device":
-            namespace_id = self.opcua_id_namespace_devices
-          elif device["DeviceType"] == "twin":
+          if device["DeviceType"] == "Twins":
             namespace_id = self.opcua_id_namespace_twins
+          elif device["DeviceType"] == "Gateways":
+            namespace_id = self.opcua_id_namespace_devices
+          elif device["DeviceType"] == "Devices":
+            namespace_id = self.opcua_id_namespace_devices
 
           self.logger.info("[SERVER] DEVICE TYPE: %s" % device["DeviceType"])
-          self.logger.info("[SERVER] DEVICE NAME: %s" % device["DeviceName"])
+          self.logger.info("[SERVER] DEVICE NAME: %s" % device["Name"])
 
-          self.node_instances[device["DeviceName"]] = await self.opcua_server_instance.nodes.objects.add_object(namespace_id, device["DeviceName"])
-          self.logger.info("[SERVER] NODE ID: %s" % self.node_instances[device["DeviceName"]])
+          self.node_instances[device["Name"]] = await self.opcua_server_instance.nodes.objects.add_object(namespace_id, device["Name"])
+          self.logger.info("[SERVER] NODE ID: %s" % self.node_instances[device["Name"]])
 
           # Add the device info to the map telemetry file
-          self.map_telemetry_devices.append(self.create_map_telemetry_device(device["DeviceName"], str(self.node_instances[device["DeviceName"]]), device["DeviceType"], device["DeviceCapabilityModelId"]))
+          self.map_telemetry_devices.append(self.create_map_telemetry_device(device["Name"], str(self.node_instances[device["Name"]]), device["DeviceType"], device["DeviceCapabilityModelId"]))
           self.logger.info("[SERVER] ADDED DEVICE TO MAP TELEMETRY FILE: %s" % self.map_telemetry_devices)
 
           interface_count = 0
@@ -203,7 +219,7 @@ class OpcUaServer():
               self.logger.info(log_msg.format(dn = variable["DisplayName"], vn = variable["TelemetryName"], tn = variable["TelemetryName"], rv = variable["RangeValues"][0], it = variable["IoTCDataType"], ovt = opc_variant_type, odt = opc_variant_type))
 
               # Create Node Variable
-              nodeObject = await self.node_instances[device["DeviceName"]].add_variable(namespace_id, telemetry_name, range_value)
+              nodeObject = await self.node_instances[device["Name"]].add_variable(namespace_id, telemetry_name, range_value)
               await nodeObject.set_writable()
               self.variable_instances[telemetry_name] = nodeObject
 
@@ -227,11 +243,11 @@ class OpcUaServer():
         self.logger.info("[SERVER] MAP TELEMETRY: %s" % self.map_telemetry)
         self.update_map_telemetry()
 
-        return
-
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
         self.logger.error("[TERMINATING] We encountered an error in OPCUA Server Setup::load_nodes_from_devicecache()")
+
+      return
 
     # -------------------------------------------------------------------------------
     #   Function:   load_config
@@ -272,9 +288,9 @@ class OpcUaServer():
     #   Function:   create_map_telemetry_device
     #   Usage:      Adds a device to the map telemetry configuration file
     # -------------------------------------------------------------------------------
-    def create_map_telemetry_device(self, DeviceName, OpcUaNodeId, DeviceType, DeviceCapabilityModelId):
+    def create_map_telemetry_device(self, Name, OpcUaNodeId, DeviceType, DeviceCapabilityModelId):
       mapTelemetry = {
-        "DeviceName": DeviceName,
+        "Name": Name,
         "NodeId": OpcUaNodeId,
         "DeviceType": DeviceType,
         "DeviceCapabilityModelId": DeviceCapabilityModelId,

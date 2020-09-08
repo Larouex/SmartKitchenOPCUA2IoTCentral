@@ -24,20 +24,20 @@ from Classes.config import Config
 async def provision_devices(Id, InFileName, ModelType, NumberOfDevices):
 
   provisiondevices = ProvisionDevices(Log, Id, InFileName, ModelType, NumberOfDevices)
+  print("HERE HERE")
   await provisiondevices.provision_devices()
   return True
 
 async def main(argv):
 
     # execution state from args
-    whatif = False
     id = 1
     infilename = None
-    model_type = "twin"
+    model_type = "Twins"
     number_of_devices = 1
 
-    short_options = "hvdwr:i:m:n:"
-    long_options = ["help", "verbose", "debug", "whatif", "registerid=", "infilename=", "modeltype=", "numberofdevices="]
+    short_options = "hvdr:i:m:n:"
+    long_options = ["help", "verbose", "debug", "registerid=", "infilename=", "modeltype=", "numberofdevices="]
     full_cmd_arguments = sys.argv
     argument_list = full_cmd_arguments[1:]
     try:
@@ -56,7 +56,6 @@ async def main(argv):
         print("  -h or --help - Print out this Help Information")
         print("  -v or --verbose - Debug Mode with lots of Data will be Output to Assist with Debugging")
         print("  -d or --debug - Debug Mode with lots of DEBUG Data will be Output to Assist with Tracing and Debugging")
-        print("  -w or --whatif - Combine with Verbose it will Output the Configuration sans starting the Server")
         print("")
         print("  OPTIONAL PARAMETERS...")
         print("")
@@ -68,7 +67,7 @@ async def main(argv):
         print("       USAGE: -i config_smartkitchen.json")
         print("       DEFAULT: config.json")
         print("")
-        print("    -m or --modeltype - Provision as collective Twin, Gateway or by Device Pattern.")
+        print("    -m or --modeltype - Provision as collective Twins, Gateways or by Devices Pattern.")
         print("       USAGE: -m Twins | -m Gateways | -m Devices")
         print("       DEFAULT: Twins")
         print("")
@@ -89,10 +88,6 @@ async def main(argv):
         Log.info("Debug Logging Mode...")
       else:
         Log.basicConfig(format="%(levelname)s: %(message)s")
-
-      if current_argument in ("-w", "--whatif"):
-        whatif = True
-        Log.info("Whatif Mode...")
 
       if current_argument in ("-r", "--registerid"):
         id = current_value

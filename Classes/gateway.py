@@ -50,16 +50,7 @@ class Gateway():
       self.telemetry_dict = {}
 
       # Azure Device
-      self.telemetry_loop = {}
-      self.device_client = {}
-
-    # -------------------------------------------------------------------------------
-    #   Function:   run
-    #   Usage:      The start function loads configuration and starts the OPC Server
-    # -------------------------------------------------------------------------------
-    async def loop_telemtery(self, DeviceClient):
-
-      return
+      self.device_client = None
 
     # -------------------------------------------------------------------------------
     #   Function:   run
@@ -69,14 +60,6 @@ class Gateway():
 
       # Gateway Loop
       try:
-
-        # Create a dictionary of loops
-
-        for device in self.map_telemetry["Devices"]:
-
-          self.device_client(device["DeviceName"]) = DeviceClient(self.logger, device["DeviceName"])
-          await self.device_client(device["DeviceName"]).connect()
-          self.telemetry_loop(device["DeviceName"]) = asyncio.create_task(loop_telemtery(self.device_client(device["DeviceName"]),))
 
         # configure the endpoint
         url = self.config["ClientUrlPattern"].format(port = self.config["Port"])
@@ -91,7 +74,8 @@ class Gateway():
             for device in self.map_telemetry["Devices"]:
 
               # Set device client from Azure IoT SDK and connect
-              device_client = DeviceClient(self.logger, device["DeviceName"])
+              device_client = DeviceClient(self.logger, device["Name"])
+              print(device_client)
               await device_client.connect()
               self.logger.info("[GATEWAY] CONNECTING IOT CENTRAL: %s" % device_client)
 
