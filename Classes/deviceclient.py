@@ -21,10 +21,10 @@ from azure.iot.device import MethodResponse
 from Classes.secrets import Secrets
 
 class DeviceClient():
-    
+
     def __init__(self, Log, DeviceName):
       self.logger = Log
-      
+
       # Azure Device
       self.device_name = DeviceName
       self.device_secrets = []

@@ -104,14 +104,15 @@ class Gateway():
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
         self.logger.error("[TERMINATING] We encountered an error in Gateway" )
-        return
+        return 999
 
       finally:
           await client.disconnect()
           self.device_client = None
           #self.device_client.disconnect()
+          return 0
 
-      return
+      return 0
 
     # -------------------------------------------------------------------------------
     #   Function:   load_config
