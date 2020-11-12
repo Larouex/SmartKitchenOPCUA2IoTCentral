@@ -26,10 +26,8 @@ config_data = None
 # -------------------------------------------------------------------------------
 async def gateway_run(WhatIf):
 
-  return = 999
   gateway = Gateway(Log, WhatIf)
-  while return = 999:
-    await gateway.run()
+  await gateway.run()
 
   return True
 

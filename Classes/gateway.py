@@ -7,9 +7,9 @@
 #   Online:   www.hackinmakin.com
 #
 #   (c) 2020 Larouex Software Design LLC
-#   This code is licensed under MIT license (see LICENSE.txt for details)    
+#   This code is licensed under MIT license (see LICENSE.txt for details)
 # ==================================================================================
-import json, sys, time, string, threading, asyncio, os, copy
+import json, sys, time, string, threading, asyncio, os, copy, datetime
 import logging
 
 # opcua
@@ -29,7 +29,7 @@ from Classes.deviceclient import DeviceClient
 from Classes.devicescache import DevicesCache
 
 class Gateway():
-    
+
     def __init__(self, Log, WhatIf):
       self.logger = Log
       self.whatif = WhatIf
@@ -49,8 +49,8 @@ class Gateway():
       self.telemetry_msg = {}
       self.telemetry_dict = {}
 
-      # Azure Device
-      self.device_client = None
+      # Azure Device List
+      self.device_client_dict = {}
 
     # -------------------------------------------------------------------------------
     #   Function:   run
@@ -67,17 +67,30 @@ class Gateway():
 
         async with Client(url=url) as client:
 
+          # Capture the index and list of connections
+          index = 0
+
+          # Create the device instances
+          for device in self.map_telemetry["Devices"]:
+            device_proxy = DeviceClient(self.logger, device["Name"])
+            self.logger.info("[GATEWAY] DEVICE %s" % device_proxy)
+            await device_proxy.connect()
+            self.logger.info("[GATEWAY] CONNECTED %s" % device_proxy)
+            self.device_client_dict[device["Name"]] = device_proxy
+            #self.device_client.append(device_proxy)
+            self.map_telemetry["Devices"][index]["Connected"] = True
+            self.map_telemetry["Devices"][index]["ConnectedDateTime"] = str(datetime.datetime.now())
+            index = index + 1
+
+          self.update_map_telemetry()
+
           while True:
 
             await asyncio.sleep(self.config["ClientFrequencyInSeconds"])
 
+            #for device_name, device_client in enumerate(self.device_client_dict):
             for device in self.map_telemetry["Devices"]:
-
-              # Set device client from Azure IoT SDK and connect
-              device_client = DeviceClient(self.logger, device["Name"])
-              print(device_client)
-              await device_client.connect()
-              self.logger.info("[GATEWAY] CONNECTING IOT CENTRAL: %s" % device_client)
+            #for device in self.device_client:
 
               for interface in device["Interfaces"]:
 
@@ -98,8 +111,11 @@ class Gateway():
                   self.logger.info("[GATEWAY] DICTIONARY: %s" % self.telemetry_dict)
 
                 self.logger.info("[GATEWAY] SENDING PAYLOAD IOT CENTRAL")
-                await device_client.send_telemetry(self.telemetry_dict, interface["InterfacelId"], interface["InterfaceInstanceName"])
+                device_proxy = self.device_client_dict[device["Name"]]
+                await device_proxy.send_telemetry(self.telemetry_dict, interface["InterfacelId"], interface["InterfaceInstanceName"])
                 self.logger.info("[GATEWAY] SUCCESS")
+                #await device_client.disconnect()
+                await asyncio.sleep(3)
 
       except Exception as ex:
         self.logger.error("[ERROR] %s" % ex)
@@ -107,10 +123,20 @@ class Gateway():
         return 999
 
       finally:
-          await client.disconnect()
-          self.device_client = None
-          #self.device_client.disconnect()
-          return 0
+
+        await client.disconnect()
+
+        index = 0
+        for device in self.device_client:
+          device_proxy = self.device_client_dict[device["Name"]]
+          await device_proxy.disconnect()
+          self.logger.info("[GATEWAY] DISCONNECTING: %s" % device)
+          self.map_telemetry["Devices"][index]["Connected"] = False
+          index = index + 1
+
+        self.update_map_telemetry()
+
+        return 0
 
       return 0
 
@@ -147,4 +173,13 @@ class Gateway():
       map_telemetry = MapTelemetry(self.logger)
       map_telemetry.load_file()
       self.map_telemetry = map_telemetry.data
+      return
+
+    # -------------------------------------------------------------------------------
+    #   Function:   update_map_telemetry
+    #   Usage:      Saves the generated Map Telemetry File
+    # -------------------------------------------------------------------------------
+    def update_map_telemetry(self):
+      map_telemetry_file = MapTelemetry(self.logger)
+      map_telemetry_file.update_file(self.map_telemetry)
       return

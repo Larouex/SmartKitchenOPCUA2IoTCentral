@@ -291,6 +291,8 @@ class OpcUaServer():
     def create_map_telemetry_device(self, Name, OpcUaNodeId, DeviceType, DeviceCapabilityModelId):
       mapTelemetry = {
         "Name": Name,
+        "Connected": False,
+        "ConnectedDateTime": "",
         "NodeId": OpcUaNodeId,
         "DeviceType": DeviceType,
         "DeviceCapabilityModelId": DeviceCapabilityModelId,
