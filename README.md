@@ -42,8 +42,8 @@ Let's go through the telemetry for each model...
 
     Baselines and Trends
     ---------------------------------
-    Ideal Temperature = 39 F
-    Ideal Humidity = 65 RH
+    Ideal Temperature = 0 F
+    Ideal Humidity = 100 RH
     Door Open Count is a Trend
     Door Ajar is a Trend
     Compressor Health > 98
@@ -52,17 +52,37 @@ Let's go through the telemetry for each model...
 
     Measurements
     ---------------------------------
+    Temperature
+    Humidity
+    Door Open Count
+    Door Ajar
+    Compressor Health
 
     Baselines and Trends
     ---------------------------------
+    Ideal Temperature = 39 F
+    Ideal Humidity = 65 RH
+    Door Open Count is a Trend
+    Door Ajar is a Trend
+    Compressor Health > 98
 
 ## Standing Freezer
 
     Measurements
     ---------------------------------
+    Temperature
+    Humidity
+    Door Open Count
+    Door Ajar
+    Compressor Health
 
     Baselines and Trends
     ---------------------------------
+    Ideal Temperature = 0 F
+    Ideal Humidity = 100 RH
+    Door Open Count is a Trend
+    Door Ajar is a Trend
+    Compressor Health > 98
 
 ## Standing Refrigerator
 
