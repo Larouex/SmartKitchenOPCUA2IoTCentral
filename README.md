@@ -18,7 +18,7 @@ Let's go through the telemetry for each model...
 
 ## Kitchen HVAC System
 
-    ### Measurements
+    <b>Measurements</b>
     * Airflow Temperature
     * Main Motor RPM
     * CFM
