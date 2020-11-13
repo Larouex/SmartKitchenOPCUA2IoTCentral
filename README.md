@@ -18,12 +18,12 @@ Let's go through the telemetry for each model...
 
 ## Kitchen HVAC System
 
-Measurements
-* Airflow Temperature
-* Main Motor RPM
-* CFM
+    Measurements
+    * Airflow Temperature
+    * Main Motor RPM
+    * CFM
 
-Baselines and Trends
-* Ideal Temperature = 68 F
-* Main Motor RPM > Trend
-* CFM > Trend
+    Baselines and Trends
+    * Ideal Temperature = 68 F
+    * Main Motor RPM > Trend
+    * CFM > Trend
