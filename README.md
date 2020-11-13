@@ -8,8 +8,8 @@ The core of this demo application for Azure IoT Central is the emulation of comm
 * Kitchen HVAC System
 * Walk In Freezer
 * Walk In Refrigerator
-* Standing Refrigerator
 * Standing Freezer
+* Standing Refrigerator
 * Fryer
 * Cold Table
 * Dishwasher
@@ -29,3 +29,55 @@ Let's go through the telemetry for each model...
     * Ideal Temperature = 68 F
     * Main Motor RPM > Trend
     * CFM > Trend
+
+## Walk In Freezer
+
+    Measurements
+    ---------------------------------
+    Temperature
+    Humidity
+    Door Open Count
+    Door Ajar
+    Compressor Health
+
+    Baselines and Trends
+    ---------------------------------
+    Ideal Temperature = 39 F
+    Ideal Humidity = 65 RH
+    Door Open Count is a Trend
+    Door Ajar is a Trend
+    Compressor Health > 98
+
+## Walk In Refrigerator
+
+    Measurements
+    ---------------------------------
+
+    Baselines and Trends
+    ---------------------------------
+
+## Standing Freezer
+
+    Measurements
+    ---------------------------------
+
+    Baselines and Trends
+    ---------------------------------
+
+## Standing Refrigerator
+
+    Measurements
+    ---------------------------------
+    Temperature
+    Humidity
+    Door Open Count
+    Door Ajar
+    Compressor Health
+
+    Baselines and Trends
+    ---------------------------------
+    Ideal Temperature = 39 F
+    Ideal Humidity = 65 RH
+    Door Open Count is a Trend
+    Door Ajar is a Trend
+    Compressor Health > 98
