@@ -22,6 +22,7 @@ Measurements
 * Airflow Temperature
 * Main Motor RPM
 * CFM
+
 Baselines and Trends
 * Ideal Temperature = 68 F
 * Main Motor RPM > Trend
