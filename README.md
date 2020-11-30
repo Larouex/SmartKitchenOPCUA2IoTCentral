@@ -9,7 +9,7 @@ This demonstration is a reference implementation of the following...
 * <b>Azure IoT Central SaaS Integration</b> - Azure IoT Central is a rich Software as a Service (SaaS) application that provides Telemetry, Device Management and Data Visualizations. That is just a small part of what it can do. We want to provide you with a way to understand and leverage these features with little coding and tons of power!
 
 ## Smart Kitchen Appliances
-The core of this demo application for Azure IoT Central is the emulation of commercial kitchen. We have included the following standard appliance models...
+The core of this demo application for Azure IoT Central is the emulation of commercial kitchen. We have included the following emulated appliance models that you would find in a commercial kitchen...
 
 * Ambient Environment
 * Kitchen HVAC System
@@ -24,8 +24,9 @@ The core of this demo application for Azure IoT Central is the emulation of comm
 Let's go through the telemetry for each model...
 
 ## Kitchen HVAC System
-
 ![alt text](./Assets/commercial-hvac-header.png "Kitchen HVAC System") 
+
+[LINK: Detailed Overview for the Kitchen HVAC System](./KitchenHVACSystemOverview.md)
 
     Measurements
     ---------------------------------
