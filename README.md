@@ -40,7 +40,7 @@ Let's go through the telemetry for each model...
     * CFM > Trend
 
 ## Walk In Freezer
-![alt text](./Assets/commercial-walkin-freezer-header.png.png "Walk In Freezer") 
+![alt text](./Assets/commercial-walkin-freezer-header.png "Walk In Freezer") 
 
     Measurements
     ---------------------------------
@@ -59,6 +59,7 @@ Let's go through the telemetry for each model...
     Compressor Health > 98
 
 ## Walk In Refrigerator
+![alt text](./Assets/commercial-walkin-fridge-header.png "Walk In Refrigerator") 
 
     Measurements
     ---------------------------------
@@ -77,6 +78,7 @@ Let's go through the telemetry for each model...
     Compressor Health > 98
 
 ## Standing Freezer
+![alt text](./Assets/commercial-standing-freezer-header.png "Standing Freezer")
 
     Measurements
     ---------------------------------
@@ -95,6 +97,7 @@ Let's go through the telemetry for each model...
     Compressor Health > 98
 
 ## Standing Refrigerator
+![alt text](./Assets/commercial-standing-fridge-header.png "Standing Refrigerator")
 
     Measurements
     ---------------------------------
