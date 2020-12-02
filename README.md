@@ -21,7 +21,7 @@ The core of this demo application for Azure IoT Central is the emulation of comm
 * Cold Table [LINK: Detailed Overview for the Cold Table](./ColdTableOverview.md)
 * Dishwasher [LINK: Detailed Overview for the Dishwasher](./DishwasherOverview.md)
 
-Let's go through the telemetry for each model...
+# Let's go through the telemetry for each model...
 
 ## Kitchen HVAC System
 ![alt text](./Assets/commercial-hvac-header.png "Kitchen HVAC System") 
