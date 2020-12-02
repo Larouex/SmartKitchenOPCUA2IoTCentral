@@ -5,7 +5,7 @@ This project is designed to assist you in understanding how to integrate an OPC-
 
 This project is targeted at system integrators, developers and administrators of an OPC-UA system. This project is for learning purposes and supports the OPC-UA emulation, modeling and Azure IoT concepts that will help you gain deeper knowledge of this scenario.
 
-IMPORTANT: If you are pursuant of a production or commercial implementation of Industrial IoT with Miocrosoft Azure IoT and Azure IoT Central , Microsoft Industrial IoT have developed and you should start here {{{TDB}}}
+<b>IMPORTANT:</b> If you are pursuant of a production or commercial implementation of Industrial IoT with and Azure IoT Central; The Microsoft Industrial IoT Team have developed a production ready system and you should start here {{{TDB}}}
 
 ## Overview
 This demonstration is a reference implementation of the following...
@@ -13,6 +13,13 @@ This demonstration is a reference implementation of the following...
 * <b>OPC-UA Server</b> - Based on the popular FreeOPcUa project for Python.
 * <b>Powerful Emulation</b> - Dynamic Configuration of OPC-UA Server, Nodes and Variables allow you to emulate topologies. In this project it is an instance of a Smart Commercial Kitchen.
 * <b>Azure IoT Central SaaS Integration</b> - Azure IoT Central is a rich Software as a Service (SaaS) application that provides Telemetry, Device Management and Data Visualizations. That is just a small part of what it can do. We want to provide you with a way to understand and leverage these features with little coding and tons of power!
+
+## How to use this Project and Tutorial
+| Skill | Entry Point | Do This! |
+|---|---|---|
+| Developer | Starting from Scratch | [LINK: Getting Started](./developer-getting-started.md) |
+| Developer | Already Develop on Python  | [LINK: Download the Project](./developer-getting-started.md) |
+
 
 ## Smart Kitchen Appliances
 The core of this demo application for Azure IoT Central is the emulation of commercial kitchen. We have included the following emulated appliance models that you would find in a commercial kitchen...
