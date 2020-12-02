@@ -1,5 +1,11 @@
-# Smart Kitchen OPC-UA Integration with IoTCentral
+# Smart Kitchen OPC-UA Integration with Azure IoT Central
 Demonstrates the use of OPC-UA to Monitor the Equipment in a Smart Commercial Kitchen with Telemetry and Integration to Azure IoT Central via a Transparent Gateway with Protocol Translation.
+
+This project is designed to assist you in understanding how to integrate an OPC-UA topology with Azure IoT Central. We have organized this project that supports all of the scenarios that you may encounter bringing in this kind of integration with Azure IoT Central.
+
+This project is targeted at system integrators, developers and administrators of an OPC-UA system. This project is for learning purposes and supports the OPC-UA emulation, modeling and Azure IoT concepts that will help you gain deeper knowledge of this scenario.
+
+IMPORTANT: If you are pursuant of a production or commercial implementation of Industrial IoT with Miocrosoft Azure IoT and Azure IoT Central , Microsoft Industrial IoT have developed and you should start here {{{TDB}}}
 
 ## Overview
 This demonstration is a reference implementation of the following...
