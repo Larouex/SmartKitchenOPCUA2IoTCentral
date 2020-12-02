@@ -1,4 +1,4 @@
-# Walk In Freezer - Smart Kitchen OPC-UA Integration with IoTCentral
+# Walk In Freezer - Smart Kitchen OPC-UA Integration with Azure IoT Central
 ![alt text](./Assets/commercial-walkin-freezer-header.png "Walk In Freezer")
 
 This is a detailed overview of the following...

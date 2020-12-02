@@ -1,4 +1,4 @@
-# Standing Refrigerator - Smart Kitchen OPC-UA Integration with IoTCentral
+# Standing Refrigerator - Smart Kitchen OPC-UA Integration with Azure IoT Central
 ![alt text](./Assets/commercial-standing-fridge-header.png "Standing Refrigerator")
 
 This is a detailed overview of the following...

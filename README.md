@@ -12,12 +12,12 @@ This demonstration is a reference implementation of the following...
 The core of this demo application for Azure IoT Central is the emulation of commercial kitchen. We have included the following emulated appliance models that you would find in a commercial kitchen...
 
 * Ambient Environment
-* Kitchen HVAC System
-* Walk In Freezer
-* Walk In Refrigerator
-* Standing Freezer
-* Standing Refrigerator
-* Fryer
+* Kitchen HVAC System [LINK: Detailed Overview for the Kitchen HVAC System](./KitchenHVACSystemOverview.md)
+* Walk In Freezer [LINK: Detailed Overview for the Walk In Freezer](./WalkInFreezerOverview.md)
+* Walk In Refrigerator [LINK: Detailed Overview for the Walk In Refrigerator](./WalkInRefrigeratorOverview.md)
+* Standing Freezer [LINK: Detailed Overview for the Standing Freezer](./StandingFreezerOverview.md)
+* Standing Refrigerator [LINK: Detailed Overview for the Fryer](./StandingRefrigeratorOverview.md)
+* Fryer [LINK: Detailed Overview for the Fryer](./FryerOverview.md)
 * Cold Table
 * Dishwasher
 
@@ -85,6 +85,8 @@ Let's go through the telemetry for each model...
 ## Standing Freezer
 ![alt text](./Assets/commercial-standing-freezer-header.png "Standing Freezer")
 
+[LINK: Detailed Overview for the Standing Freezer](./StandingFreezerOverview.md)
+
     Measurements
     ---------------------------------
     Temperature
@@ -103,6 +105,8 @@ Let's go through the telemetry for each model...
 
 ## Standing Refrigerator
 ![alt text](./Assets/commercial-standing-fridge-header.png "Standing Refrigerator")
+
+[LINK: Detailed Overview for the Standing Refrigerator](./StandingRefrigeratorOverview.md)
 
     Measurements
     ---------------------------------
