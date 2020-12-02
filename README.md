@@ -18,8 +18,8 @@ The core of this demo application for Azure IoT Central is the emulation of comm
 * Standing Freezer [LINK: Detailed Overview for the Standing Freezer](./StandingFreezerOverview.md)
 * Standing Refrigerator [LINK: Detailed Overview for the Fryer](./StandingRefrigeratorOverview.md)
 * Fryer [LINK: Detailed Overview for the Fryer](./FryerOverview.md)
-* Cold Table
-* Dishwasher
+* Cold Table [LINK: Detailed Overview for the Cold Table](./ColdTableOverview.md)
+* Dishwasher [LINK: Detailed Overview for the Dishwasher](./DishwasherOverview.md)
 
 Let's go through the telemetry for each model...
 
@@ -140,3 +140,37 @@ Let's go through the telemetry for each model...
       Ideal Temperature = 350-360 F
       Oil Quality > 75
       Fryer Heater Health > 98
+
+## Cold Table
+![alt text](./Assets/commercial-cold-table.png "Cold Table")
+
+[LINK: Detailed Overview for the Cold Table](./FryerOverview.md)
+
+    Measurements
+    ---------------------------------
+      Temperature
+      Compressor Health
+
+    Baselines and Trends
+    ---------------------------------
+      Ideal Temperature = 39 F
+      Compressor Health > 98
+
+## Dishwasher
+![alt text](./Assets/commercial-dishwasher.png "Dishwasher")
+
+[LINK: Detailed Overview for the Dishwasher](./DishwasherOverview.md)
+
+    Measurements
+    ---------------------------------
+      Heating Element Health
+      Motor Health
+      Wash Cycles
+      Temperature
+
+    Baselines and Trends
+    ---------------------------------
+      Ideal Temperature = 180-185 F
+      Heating Element Health > 98
+      Motor Health > 98
+      Wash Cycles - Trend Count
