@@ -11,7 +11,7 @@
 	"CacheAddrSpaceFileName": "cache.opc",
 	"ServerFrequencyInSeconds": 15,
   "ClientFrequencyInSeconds": 20,
-  "TelemetryRings": [
+  "TelemetryRings": ["ClientUrlPattern",
     {"Ring0": 15},
     {"Ring1": 20},
     {"Ring2": 25},

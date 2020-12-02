@@ -43,6 +43,8 @@ Let's go through the telemetry for each model...
 ## Walk In Freezer
 ![alt text](./Assets/commercial-walkin-freezer-header.png "Walk In Freezer") 
 
+[LINK: Detailed Overview for the Walk In Freezer](./WalkInFreezerOverview.md)
+
     Measurements
     ---------------------------------
     Temperature
@@ -61,6 +63,8 @@ Let's go through the telemetry for each model...
 
 ## Walk In Refrigerator
 ![alt text](./Assets/commercial-walkin-fridge-header.png "Walk In Refrigerator") 
+
+[LINK: Detailed Overview for the Walk In Refrigerator](./WalkInRefrigeratorOverview.md)
 
     Measurements
     ---------------------------------

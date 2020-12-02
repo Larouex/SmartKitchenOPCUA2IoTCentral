@@ -1,5 +1,5 @@
-# Kitchen HVAC System - Smart Kitchen OPC-UA Integration with IoTCentral
-![alt text](./Assets/commercial-hvac-header.png "Kitchen HVAC System") 
+# Walk In Refrigerator - Smart Kitchen OPC-UA Integration with IoTCentral
+![alt text](./Assets/commercial-walkin-fridge-header.png "Walk In Refrigerator")
 
 This is a detailed overview of the following...
 
@@ -7,17 +7,21 @@ This is a detailed overview of the following...
 * <b>Telemetry</b> The Telemetry that we are emulating.
 * <b>Plug and Play Model</b> The Azure Plug and Play Model we are using with IoT Central.
 
-## Kitchen HVAC System
+## Walk In Refrigerator
 
     Measurements
     ---------------------------------
-    * Airflow Temperature
-    * Main Motor RPM
-    * CFM
+    Temperature
+    Humidity
+    Door Open Count
+    Door Ajar
+    Compressor Health
 
     Baselines and Trends
     ---------------------------------
-    * Ideal Temperature = 68 F
-    * Main Motor RPM > Trend
-    * CFM > Trend
+    Ideal Temperature = 39 F
+    Ideal Humidity = 65 RH
+    Door Open Count is a Trend
+    Door Ajar is a Trend
+    Compressor Health > 98
 
