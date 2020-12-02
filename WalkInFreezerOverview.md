@@ -1,5 +1,5 @@
 # Walk In Freezer - Smart Kitchen OPC-UA Integration with IoTCentral
-![alt text](./Assets/commercial-hvac-header.png "Kitchen HVAC System")
+![alt text](./Assets/commercial-walkin-freezer-header.png "Walk In Freezer")
 
 This is a detailed overview of the following...
 
@@ -8,7 +8,6 @@ This is a detailed overview of the following...
 * <b>Plug and Play Model</b> The Azure Plug and Play Model we are using with IoT Central.
 
 ## Walk In Freezer
-![alt text](./Assets/commercial-walkin-freezer-header.png "Walk In Freezer")
 
     Measurements
     ---------------------------------
