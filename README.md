@@ -119,3 +119,20 @@ Let's go through the telemetry for each model...
     Door Open Count is a Trend
     Door Ajar is a Trend
     Compressor Health > 98
+
+## Fryer
+![alt text](./Assets/commercial-fryer-header.png "Fryer")
+
+[LINK: Detailed Overview for the Fryer](./FryerOverview.md)
+
+    Measurements
+    ---------------------------------
+      Temperature
+      Oil Quality
+      Fryer Heater Health
+
+    Baselines and Trends
+    ---------------------------------
+      Ideal Temperature = 350-360 F
+      Oil Quality > 75
+      Fryer Heater Health > 98
