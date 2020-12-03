@@ -13,7 +13,10 @@ This demonstration is a reference implementation of the following...
 * <b>OPC-UA Server</b> - Based on the popular FreeOPcUa project for Python.
 * <b>Powerful Emulation</b> - Dynamic Configuration of OPC-UA Server, Nodes and Variables allow you to emulate topologies. In this project it is an instance of a Smart Commercial Kitchen.
 * <b>Azure IoT Central SaaS Integration</b> - Azure IoT Central is a rich Software as a Service (SaaS) application that provides Telemetry, Device Management and Data Visualizations. That is just a small part of what it can do. We want to provide you with a way to understand and leverage these features with little coding and tons of power!
-
+## Who is Audience for this Project?
+* System Integrators
+* Developers
+* Administrators of an OPC-UA System
 ## Roles and Starting Points  Project and Tutorial
 | Role | Area | Entry Point | Do This! |
 |---|---|---|---|
