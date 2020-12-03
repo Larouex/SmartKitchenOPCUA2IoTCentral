@@ -14,11 +14,13 @@ This demonstration is a reference implementation of the following...
 * <b>Powerful Emulation</b> - Dynamic Configuration of OPC-UA Server, Nodes and Variables allow you to emulate topologies. In this project it is an instance of a Smart Commercial Kitchen.
 * <b>Azure IoT Central SaaS Integration</b> - Azure IoT Central is a rich Software as a Service (SaaS) application that provides Telemetry, Device Management and Data Visualizations. That is just a small part of what it can do. We want to provide you with a way to understand and leverage these features with little coding and tons of power!
 
-## How to use this Project and Tutorial
-| Skill | Entry Point | Do This! |
-|---|---|---|
-| Developer | Starting from Scratch | [LINK: Getting Started](./developer-getting-started.md) |
-| Developer | Already Develop on Python  | [LINK: Download the Project](./developer-getting-started.md) |
+## Roles and Starting Points  Project and Tutorial
+| Role | Area | Entry Point | Do This! |
+|---|---|---|---|
+| Developer | Coding | Starting from Scratch | [LINK: Getting Started](./developer-getting-started.md) |
+| Developer | Coding | Already Developing on Python  | [LINK: Download the Project](./developer-getting-started.md) |
+| All | OPC-UA | Configuration of the OPC-UA Client | [LINK: Configuration of the OPC-UA Client](./OpcUaClientOverview.md) |
+| All | Modeling | PnP Modeling  | [LINK: Modeling Overview](./developer-getting-started.md) |
 
 
 ## Smart Kitchen Appliances
@@ -34,7 +36,7 @@ The core of this demo application for Azure IoT Central is the emulation of comm
 * Cold Table [LINK: Detailed Overview for the Cold Table](./ColdTableOverview.md)
 * Dishwasher [LINK: Detailed Overview for the Dishwasher](./DishwasherOverview.md)
 
-# Let's go through the telemetry for each model...
+## Telemetry for the Smart Kitchen...
 
 ## Kitchen HVAC System
 ![alt text](./Assets/commercial-hvac-header.png "Kitchen HVAC System") 
