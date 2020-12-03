@@ -40,9 +40,14 @@ The core of this demo application for Azure IoT Central is the emulation of comm
 * Dishwasher [LINK: Detailed Overview for the Dishwasher](./DishwasherOverview.md)
 
 ## Telemetry for the Smart Kitchen...
+Below we outline each of the Smart Kitchen Appliances in this project and provide a quick overview of the emitted telemetry from each OPC-UA node. Each Appliance has links that go deeper into the following...
+
+* <b>PnP Modeling</b> - Explanation and "how to" on definition of the modeling for IoT Central. We cover the three patterns: Twin, Individual Asset and Edge Relationships.
+* <b>Configuration for the OPC-UA Server</b> - Explain the configuration of the Nodes and Variables. You can completely customize as you want.
+* <b>Define the Emitted Values from the OPC-UA Server</b> - How to create data that is emitted from the Node in OPC-UA, frequency, variance and errors.
 
 ## Kitchen HVAC System
-![alt text](./Assets/commercial-hvac-header.png "Kitchen HVAC System") 
+![alt text](./Assets/commercial-hvac-header.png "Kitchen HVAC System")
 
 [LINK: Detailed Overview for the Kitchen HVAC System](./KitchenHVACSystemOverview.md)
 
