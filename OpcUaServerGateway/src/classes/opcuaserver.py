@@ -19,10 +19,10 @@ from asyncua import ua, Server
 from asyncua.common.methods import uamethod
 
 # our classes
-from Classes.config import Config
-from Classes.devicescache import DevicesCache
-from Classes.maptelemetry import MapTelemetry
-from Classes.varianttype import VariantType
+from classes.config import Config
+from classes.devicescache import DevicesCache
+from classes.maptelemetry import MapTelemetry
+from classes.varianttype import VariantType
 
 
 class OpcUaServer():
@@ -71,37 +71,37 @@ class OpcUaServer():
     async def run(self):
 
       # OPCUA Server Run
-      try:
+      #try:
 
-        async with self.opcua_server_instance:
-          while True:
-            await asyncio.sleep(self.config["ServerFrequencyInSeconds"])
-            self.logger.info("[SERVER LOOP] STARTING:")
+      async with self.opcua_server_instance:
+        while True:
+          await asyncio.sleep(self.config["ServerFrequencyInSeconds"])
+          self.logger.info("[SERVER LOOP] STARTING:")
 
-            for device in self.map_telemetry["Devices"]:
-              for interface in device["Interfaces"]:
-                for variable in interface["Variables"]:
+          for device in self.map_telemetry["Devices"]:
+            for interface in device["Interfaces"]:
+              for variable in interface["Variables"]:
 
-                  # Get the values from our ranges we are writing
-                  value = variable["RangeValues"][int(variable["RangeValueCurrent"]) - 1]
-                  self.logger.info("[SERVER LOOP] VALUE: %s" % value)
+                # Get the values from our ranges we are writing
+                value = variable["RangeValues"][int(variable["RangeValueCurrent"]) - 1]
+                self.logger.info("[SERVER LOOP] VALUE: %s" % value)
 
-                  # Update our iterator and boundaries
-                  if int(variable["RangeValueCurrent"]) < int(variable["RangeValueCount"]):
-                    variable["RangeValueCurrent"] = int(variable["RangeValueCurrent"]) + 1
-                  else:
-                    variable["RangeValueCurrent"] = 1
+                # Update our iterator and boundaries
+                if int(variable["RangeValueCurrent"]) < int(variable["RangeValueCount"]):
+                  variable["RangeValueCurrent"] = int(variable["RangeValueCurrent"]) + 1
+                else:
+                  variable["RangeValueCurrent"] = 1
 
-                  print("int(variable[RangeValueCurrent]) %s" % int(variable["RangeValueCurrent"]))
-                  print("int(variable[RangeValueCount]) %s" % int(variable["RangeValueCount"]))
+                print("int(variable[RangeValueCurrent]) %s" % int(variable["RangeValueCurrent"]))
+                print("int(variable[RangeValueCount]) %s" % int(variable["RangeValueCount"]))
 
-                  variable_node_instance = self.opcua_server_instance.get_node(variable["NodeId"])
-                  await variable_node_instance.write_value(value)
+                variable_node_instance = self.opcua_server_instance.get_node(variable["NodeId"])
+                await variable_node_instance.write_value(value)
 
-        return
-      except Exception as ex:
-        self.logger.error("[ERROR] %s" % ex)
-        self.logger.error("[TERMINATING] We encountered an error in OpcUaServer::run()" )
+      return
+      #except Exception as ex:
+      #  self.logger.error("[ERROR] %s" % ex)
+      #  self.logger.error("[TERMINATING] We encountered an error in OpcUaServer::run()" )
 
     # -------------------------------------------------------------------------------
     #   Function:   stop

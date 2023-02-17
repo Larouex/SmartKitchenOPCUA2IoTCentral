@@ -15,8 +15,8 @@ import  hmac, getopt, sys, time, binascii, \
 import logging as Log
 
 # our classes
-from Classes.config import Config
-from Classes.gateway import Gateway
+from classes.config import Config
+from classes.gateway import Gateway
 
 # Workers
 config_data = None

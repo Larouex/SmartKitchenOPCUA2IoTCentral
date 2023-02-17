@@ -223,6 +223,708 @@
       "LastProvisioned": "2020-09-07 23:25:58.657797"
     },
     {
+      "Name": "larouex-smart-kitchen-HVAC-006",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-007",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-008",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-009",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-010",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-011",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-012",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-013",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-014",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-015",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-016",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-017",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-018",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-019",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-020",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-021",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-022",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-023",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-024",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-025",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-026",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-027",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-028",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-029",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-030",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-031",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-032",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-033",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-034",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-035",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-036",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-037",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-038",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-039",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-040",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-041",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-042",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-043",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-044",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-045",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-046",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-047",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-048",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-049",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-050",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-051",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-052",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-053",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-054",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-055",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-056",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-057",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-058",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-059",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface"
+        }
+      ],
+      "LastProvisioned": "2020-09-07 23:25:58.657797"
+    },
+    {
       "Name": "larouex-smart-kitchen-WalkinFridge-001",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",

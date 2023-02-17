@@ -19,10 +19,9 @@ from asyncua import ua, Server
 from asyncua.common.methods import uamethod
 
 # our classes
-from Classes.config import Config
-from Classes.maptelemetry import MapTelemetry
-from Classes.varianttype import VariantType
-
+from classes.config import Config
+from classes.maptelemetry import MapTelemetry
+from classes.varianttype import VariantType
 
 class OpcServer():
     

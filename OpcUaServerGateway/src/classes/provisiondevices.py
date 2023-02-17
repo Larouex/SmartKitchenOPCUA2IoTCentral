@@ -13,10 +13,10 @@
 import time, logging, string, json, os, binascii, struct, threading, asyncio, datetime
 
 # Sur classes
-from Classes.devicescache import DevicesCache
-from Classes.secrets import Secrets
-from Classes.symmetrickey import SymmetricKey
-from Classes.config import Config
+from classes.devicescache import DevicesCache
+from classes.secrets import Secrets
+from classes.symmetrickey import SymmetricKey
+from classes.config import Config
 
 # uses the Azure IoT Device SDK for Python (Native Python libraries)
 from azure.iot.device.aio import ProvisioningDeviceClient

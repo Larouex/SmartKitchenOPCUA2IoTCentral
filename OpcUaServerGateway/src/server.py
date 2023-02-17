@@ -13,9 +13,9 @@ import  getopt, sys, time, string, threading, asyncio, os
 import logging as Log
 
 # our classes
-from Classes.opcserver import OpcServer
-from Classes.config import Config
-from Classes.varianttype import VariantType
+from classes.opcserver import OpcServer
+from classes.config import Config
+from classes.varianttype import VariantType
 
 # -------------------------------------------------------------------------------
 #   Start the OPC Server

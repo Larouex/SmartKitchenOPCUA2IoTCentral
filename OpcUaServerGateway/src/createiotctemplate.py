@@ -13,9 +13,9 @@ import getopt, sys, time, string, threading, asyncio, os
 import logging as Log
 
 # our classes
-from Classes.createiotctemplate import CreateIoTCTemplate
-from Classes.config import Config
-from Classes.varianttype import VariantType
+from classes.createiotctemplate import CreateIoTCTemplate
+from classes.config import Config
+from classes.varianttype import VariantType
 
 # -------------------------------------------------------------------------------
 #   Create the Template

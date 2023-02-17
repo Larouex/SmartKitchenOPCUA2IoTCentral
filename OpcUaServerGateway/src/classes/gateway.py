@@ -21,12 +21,12 @@ from azure.iot.device import Message
 from azure.iot.device import MethodResponse
 
 # our classes
-from Classes.config import Config
-from Classes.secrets import Secrets
-from Classes.maptelemetry import MapTelemetry
-from Classes.varianttype import VariantType
-from Classes.deviceclient import DeviceClient
-from Classes.devicescache import DevicesCache
+from classes.config import Config
+from classes.secrets import Secrets
+from classes.maptelemetry import MapTelemetry
+from classes.varianttype import VariantType
+from classes.deviceclient import DeviceClient
+from classes.devicescache import DevicesCache
 
 class Gateway():
 

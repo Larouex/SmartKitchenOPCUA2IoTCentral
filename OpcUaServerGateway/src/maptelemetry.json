@@ -1,11 +1,11 @@
 {
   "NameSpace": "larouex-smart-kitchen",
-  "Created": "2020-11-12 10:38:19.972146",
+  "Created": "2023-02-17 21:21:56.370415",
   "Devices": [
     {
       "Name": "larouex-smart-kitchen-001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:13.343187",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=2;i=1",
       "DeviceType": "Twins",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Server:1",
@@ -218,12 +218,12 @@
               "RangeValueCount": 6,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                0,
-                1.34,
-                2.21,
-                0.34,
-                3.22,
-                4.23
+                29.11,
+                30.02,
+                29.21,
+                30.34,
+                30.22,
+                29.23
               ]
             },
             {
@@ -233,14 +233,18 @@
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
               "OnlyOnValueChange": false,
-              "RangeValueCount": 5,
+              "RangeValueCount": 9,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                99.1,
-                98.0,
-                97.3,
-                93.4,
-                94.5
+                54.1,
+                55.0,
+                54.3,
+                53.4,
+                55.1,
+                54.2,
+                55.4,
+                54.6,
+                53.7
               ]
             },
             {
@@ -668,8 +672,8 @@
     },
     {
       "Name": "HVAC001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:13.688190",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=1",
       "DeviceType": "Gateways",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
@@ -737,8 +741,8 @@
     },
     {
       "Name": "WalkinFridge001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:14.057269",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=5",
       "DeviceType": "Gateways",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
@@ -840,8 +844,8 @@
     },
     {
       "Name": "WalkinFreezer001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:14.451269",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=11",
       "DeviceType": "Gateways",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
@@ -861,12 +865,12 @@
               "RangeValueCount": 6,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                0,
-                1.34,
-                2.21,
-                0.34,
-                3.22,
-                4.23
+                29.11,
+                30.02,
+                29.21,
+                30.34,
+                30.22,
+                29.23
               ]
             },
             {
@@ -876,14 +880,18 @@
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
               "OnlyOnValueChange": false,
-              "RangeValueCount": 5,
+              "RangeValueCount": 9,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                99.1,
-                98.0,
-                97.3,
-                93.4,
-                94.5
+                54.1,
+                55.0,
+                54.3,
+                53.4,
+                55.1,
+                54.2,
+                55.4,
+                54.6,
+                53.7
               ]
             },
             {
@@ -943,8 +951,8 @@
     },
     {
       "Name": "Fryer001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:14.783268",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=17",
       "DeviceType": "Gateways",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
@@ -1017,8 +1025,8 @@
     },
     {
       "Name": "StandingFridge001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:15.141277",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=21",
       "DeviceType": "Gateways",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
@@ -1120,8 +1128,8 @@
     },
     {
       "Name": "StandingFreezer001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:15.462270",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=27",
       "DeviceType": "Gateways",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
@@ -1223,8 +1231,8 @@
     },
     {
       "Name": "ColdTable001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:15.873271",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=33",
       "DeviceType": "Gateways",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
@@ -1275,8 +1283,8 @@
     },
     {
       "Name": "Dishwasher001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:16.287268",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=36",
       "DeviceType": "Gateways",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
@@ -1361,8 +1369,8 @@
     },
     {
       "Name": "larouex-smart-kitchen-HVAC-001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:16.615269",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=41",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
@@ -1430,8 +1438,8 @@
     },
     {
       "Name": "larouex-smart-kitchen-HVAC-002",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:16.932269",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=45",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
@@ -1499,8 +1507,8 @@
     },
     {
       "Name": "larouex-smart-kitchen-HVAC-003",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:17.496270",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=49",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
@@ -1568,8 +1576,8 @@
     },
     {
       "Name": "larouex-smart-kitchen-HVAC-004",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:18.268269",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=53",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
@@ -1637,8 +1645,8 @@
     },
     {
       "Name": "larouex-smart-kitchen-HVAC-005",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:18.720269",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=57",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
@@ -1705,10 +1713,3736 @@
       ]
     },
     {
-      "Name": "larouex-smart-kitchen-WalkinFridge-001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:19.255269",
+      "Name": "larouex-smart-kitchen-HVAC-006",
+      "Connected": false,
+      "ConnectedDateTime": "",
       "NodeId": "ns=4;i=61",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=62",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=63",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=64",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-007",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=65",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=66",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=67",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=68",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-008",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=69",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=70",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=71",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=72",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-009",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=73",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=74",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=75",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=76",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-010",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=77",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=78",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=79",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=80",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-011",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=81",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=82",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=83",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=84",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-012",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=85",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=86",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=87",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=88",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-013",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=89",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=90",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=91",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=92",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-014",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=93",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=94",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=95",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=96",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-015",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=97",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=98",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=99",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=100",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-016",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=101",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=102",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=103",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=104",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-017",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=105",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=106",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=107",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=108",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-018",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=109",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=110",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=111",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=112",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-019",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=113",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=114",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=115",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=116",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-020",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=117",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=118",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=119",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=120",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-021",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=121",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=122",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=123",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=124",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-022",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=125",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=126",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=127",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=128",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-023",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=129",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=130",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=131",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=132",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-024",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=133",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=134",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=135",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=136",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-025",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=137",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=138",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=139",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=140",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-026",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=141",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=142",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=143",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=144",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-027",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=145",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=146",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=147",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=148",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-028",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=149",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=150",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=151",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=152",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-029",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=153",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=154",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=155",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=156",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-030",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=157",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=158",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=159",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=160",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-031",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=161",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=162",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=163",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=164",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-032",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=165",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=166",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=167",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=168",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-033",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=169",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=170",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=171",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=172",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-034",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=173",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=174",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=175",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=176",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-035",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=177",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=178",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=179",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=180",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-036",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=181",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=182",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=183",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=184",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-037",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=185",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=186",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=187",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=188",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-038",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=189",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=190",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=191",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=192",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-039",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=193",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=194",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=195",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=196",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-040",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=197",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=198",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=199",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=200",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-041",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=201",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=202",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=203",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=204",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-042",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=205",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=206",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=207",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=208",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-043",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=209",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=210",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=211",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=212",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-044",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=213",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=214",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=215",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=216",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-045",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=217",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=218",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=219",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=220",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-046",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=221",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=222",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=223",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=224",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-047",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=225",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=226",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=227",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=228",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-048",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=229",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=230",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=231",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=232",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-049",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=233",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=234",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=235",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=236",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-050",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=237",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=238",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=239",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=240",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-051",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=241",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=242",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=243",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=244",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-052",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=245",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=246",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=247",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=248",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-053",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=249",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=250",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=251",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=252",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-054",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=253",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=254",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=255",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=256",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-055",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=257",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=258",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=259",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=260",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-056",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=261",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=262",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=263",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=264",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-057",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=265",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=266",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=267",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=268",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-058",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=269",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=270",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=271",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=272",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-HVAC-059",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=273",
+      "DeviceType": "Devices",
+      "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:HVAC:1",
+      "Interfaces": [
+        {
+          "Name": "HVAC",
+          "InterfacelId": "urn:larouexsmartkitchen:HVACInterface:1",
+          "InterfaceInstanceName": "HVACInterface",
+          "Variables": [
+            {
+              "DisplayName": "HVAC Airflow Temperature",
+              "NodeId": "ns=4;i=274",
+              "TelemetryName": "hvac_airflow_temperature",
+              "IoTCDataType": "float",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 6,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                72.45,
+                73.23,
+                73.9,
+                71.54,
+                72.28,
+                73.23
+              ]
+            },
+            {
+              "DisplayName": "HVAC Airflow CFM",
+              "NodeId": "ns=4;i=275",
+              "TelemetryName": "hvac_cfm_airflow",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring3",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                127,
+                121,
+                131,
+                130,
+                129
+              ]
+            },
+            {
+              "DisplayName": "HVAC Main Motor RPM",
+              "NodeId": "ns=4;i=276",
+              "TelemetryName": "hvac_rpm_mainmotor",
+              "IoTCDataType": "integer",
+              "Frequency": "Ring2",
+              "OnlyOnValueChange": false,
+              "RangeValueCount": 5,
+              "RangeValueCurrent": 1,
+              "RangeValues": [
+                18000,
+                18500,
+                18200,
+                19000,
+                19200
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "larouex-smart-kitchen-WalkinFridge-001",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=277",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
@@ -1719,7 +5453,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Fridge Temperature",
-              "NodeId": "ns=4;i=62",
+              "NodeId": "ns=4;i=278",
               "TelemetryName": "walkin_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -1737,7 +5471,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Humidity",
-              "NodeId": "ns=4;i=63",
+              "NodeId": "ns=4;i=279",
               "TelemetryName": "walkin_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -1754,7 +5488,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Open Count",
-              "NodeId": "ns=4;i=64",
+              "NodeId": "ns=4;i=280",
               "TelemetryName": "walkin_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -1771,7 +5505,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Ajar",
-              "NodeId": "ns=4;i=65",
+              "NodeId": "ns=4;i=281",
               "TelemetryName": "walkin_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -1788,7 +5522,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Compressor Health",
-              "NodeId": "ns=4;i=66",
+              "NodeId": "ns=4;i=282",
               "TelemetryName": "walkin_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -1809,9 +5543,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-WalkinFridge-002",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:19.768272",
-      "NodeId": "ns=4;i=67",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=283",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
@@ -1822,7 +5556,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Fridge Temperature",
-              "NodeId": "ns=4;i=68",
+              "NodeId": "ns=4;i=284",
               "TelemetryName": "walkin_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -1840,7 +5574,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Humidity",
-              "NodeId": "ns=4;i=69",
+              "NodeId": "ns=4;i=285",
               "TelemetryName": "walkin_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -1857,7 +5591,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Open Count",
-              "NodeId": "ns=4;i=70",
+              "NodeId": "ns=4;i=286",
               "TelemetryName": "walkin_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -1874,7 +5608,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Ajar",
-              "NodeId": "ns=4;i=71",
+              "NodeId": "ns=4;i=287",
               "TelemetryName": "walkin_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -1891,7 +5625,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Compressor Health",
-              "NodeId": "ns=4;i=72",
+              "NodeId": "ns=4;i=288",
               "TelemetryName": "walkin_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -1912,9 +5646,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-WalkinFridge-003",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:20.216269",
-      "NodeId": "ns=4;i=73",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=289",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
@@ -1925,7 +5659,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Fridge Temperature",
-              "NodeId": "ns=4;i=74",
+              "NodeId": "ns=4;i=290",
               "TelemetryName": "walkin_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -1943,7 +5677,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Humidity",
-              "NodeId": "ns=4;i=75",
+              "NodeId": "ns=4;i=291",
               "TelemetryName": "walkin_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -1960,7 +5694,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Open Count",
-              "NodeId": "ns=4;i=76",
+              "NodeId": "ns=4;i=292",
               "TelemetryName": "walkin_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -1977,7 +5711,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Ajar",
-              "NodeId": "ns=4;i=77",
+              "NodeId": "ns=4;i=293",
               "TelemetryName": "walkin_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -1994,7 +5728,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Compressor Health",
-              "NodeId": "ns=4;i=78",
+              "NodeId": "ns=4;i=294",
               "TelemetryName": "walkin_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2015,9 +5749,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-WalkinFridge-004",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:20.572333",
-      "NodeId": "ns=4;i=79",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=295",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
@@ -2028,7 +5762,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Fridge Temperature",
-              "NodeId": "ns=4;i=80",
+              "NodeId": "ns=4;i=296",
               "TelemetryName": "walkin_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2046,7 +5780,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Humidity",
-              "NodeId": "ns=4;i=81",
+              "NodeId": "ns=4;i=297",
               "TelemetryName": "walkin_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -2063,7 +5797,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Open Count",
-              "NodeId": "ns=4;i=82",
+              "NodeId": "ns=4;i=298",
               "TelemetryName": "walkin_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2080,7 +5814,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Ajar",
-              "NodeId": "ns=4;i=83",
+              "NodeId": "ns=4;i=299",
               "TelemetryName": "walkin_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2097,7 +5831,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Compressor Health",
-              "NodeId": "ns=4;i=84",
+              "NodeId": "ns=4;i=300",
               "TelemetryName": "walkin_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2118,9 +5852,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-WalkinFridge-005",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:20.920328",
-      "NodeId": "ns=4;i=85",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=301",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFridge:1",
       "Interfaces": [
@@ -2131,7 +5865,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Fridge Temperature",
-              "NodeId": "ns=4;i=86",
+              "NodeId": "ns=4;i=302",
               "TelemetryName": "walkin_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2149,7 +5883,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Humidity",
-              "NodeId": "ns=4;i=87",
+              "NodeId": "ns=4;i=303",
               "TelemetryName": "walkin_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -2166,7 +5900,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Open Count",
-              "NodeId": "ns=4;i=88",
+              "NodeId": "ns=4;i=304",
               "TelemetryName": "walkin_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2183,7 +5917,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Door Ajar",
-              "NodeId": "ns=4;i=89",
+              "NodeId": "ns=4;i=305",
               "TelemetryName": "walkin_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2200,7 +5934,7 @@
             },
             {
               "DisplayName": "Walkin Fridge Compressor Health",
-              "NodeId": "ns=4;i=90",
+              "NodeId": "ns=4;i=306",
               "TelemetryName": "walkin_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2221,9 +5955,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-WalkinFreezer-001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:21.251456",
-      "NodeId": "ns=4;i=91",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=307",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
@@ -2234,7 +5968,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Freezer Temperature",
-              "NodeId": "ns=4;i=92",
+              "NodeId": "ns=4;i=308",
               "TelemetryName": "walkin_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2242,34 +5976,38 @@
               "RangeValueCount": 6,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                0,
-                1.34,
-                2.21,
-                0.34,
-                3.22,
-                4.23
+                29.11,
+                30.02,
+                29.21,
+                30.34,
+                30.22,
+                29.23
               ]
             },
             {
               "DisplayName": "Walkin Freezer Humidity",
-              "NodeId": "ns=4;i=93",
+              "NodeId": "ns=4;i=309",
               "TelemetryName": "walkin_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
               "OnlyOnValueChange": false,
-              "RangeValueCount": 5,
+              "RangeValueCount": 9,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                99.1,
-                98.0,
-                97.3,
-                93.4,
-                94.5
+                54.1,
+                55.0,
+                54.3,
+                53.4,
+                55.1,
+                54.2,
+                55.4,
+                54.6,
+                53.7
               ]
             },
             {
               "DisplayName": "Walkin Freezer Door Open Count",
-              "NodeId": "ns=4;i=94",
+              "NodeId": "ns=4;i=310",
               "TelemetryName": "walkin_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2286,7 +6024,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Door Ajar",
-              "NodeId": "ns=4;i=95",
+              "NodeId": "ns=4;i=311",
               "TelemetryName": "walkin_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2303,7 +6041,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Compressor Health",
-              "NodeId": "ns=4;i=96",
+              "NodeId": "ns=4;i=312",
               "TelemetryName": "walkin_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2324,9 +6062,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-WalkinFreezer-002",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:21.627936",
-      "NodeId": "ns=4;i=97",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=313",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
@@ -2337,7 +6075,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Freezer Temperature",
-              "NodeId": "ns=4;i=98",
+              "NodeId": "ns=4;i=314",
               "TelemetryName": "walkin_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2345,34 +6083,38 @@
               "RangeValueCount": 6,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                0,
-                1.34,
-                2.21,
-                0.34,
-                3.22,
-                4.23
+                29.11,
+                30.02,
+                29.21,
+                30.34,
+                30.22,
+                29.23
               ]
             },
             {
               "DisplayName": "Walkin Freezer Humidity",
-              "NodeId": "ns=4;i=99",
+              "NodeId": "ns=4;i=315",
               "TelemetryName": "walkin_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
               "OnlyOnValueChange": false,
-              "RangeValueCount": 5,
+              "RangeValueCount": 9,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                99.1,
-                98.0,
-                97.3,
-                93.4,
-                94.5
+                54.1,
+                55.0,
+                54.3,
+                53.4,
+                55.1,
+                54.2,
+                55.4,
+                54.6,
+                53.7
               ]
             },
             {
               "DisplayName": "Walkin Freezer Door Open Count",
-              "NodeId": "ns=4;i=100",
+              "NodeId": "ns=4;i=316",
               "TelemetryName": "walkin_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2389,7 +6131,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Door Ajar",
-              "NodeId": "ns=4;i=101",
+              "NodeId": "ns=4;i=317",
               "TelemetryName": "walkin_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2406,7 +6148,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Compressor Health",
-              "NodeId": "ns=4;i=102",
+              "NodeId": "ns=4;i=318",
               "TelemetryName": "walkin_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2427,9 +6169,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-WalkinFreezer-003",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:21.992938",
-      "NodeId": "ns=4;i=103",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=319",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
@@ -2440,7 +6182,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Freezer Temperature",
-              "NodeId": "ns=4;i=104",
+              "NodeId": "ns=4;i=320",
               "TelemetryName": "walkin_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2448,34 +6190,38 @@
               "RangeValueCount": 6,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                0,
-                1.34,
-                2.21,
-                0.34,
-                3.22,
-                4.23
+                29.11,
+                30.02,
+                29.21,
+                30.34,
+                30.22,
+                29.23
               ]
             },
             {
               "DisplayName": "Walkin Freezer Humidity",
-              "NodeId": "ns=4;i=105",
+              "NodeId": "ns=4;i=321",
               "TelemetryName": "walkin_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
               "OnlyOnValueChange": false,
-              "RangeValueCount": 5,
+              "RangeValueCount": 9,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                99.1,
-                98.0,
-                97.3,
-                93.4,
-                94.5
+                54.1,
+                55.0,
+                54.3,
+                53.4,
+                55.1,
+                54.2,
+                55.4,
+                54.6,
+                53.7
               ]
             },
             {
               "DisplayName": "Walkin Freezer Door Open Count",
-              "NodeId": "ns=4;i=106",
+              "NodeId": "ns=4;i=322",
               "TelemetryName": "walkin_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2492,7 +6238,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Door Ajar",
-              "NodeId": "ns=4;i=107",
+              "NodeId": "ns=4;i=323",
               "TelemetryName": "walkin_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2509,7 +6255,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Compressor Health",
-              "NodeId": "ns=4;i=108",
+              "NodeId": "ns=4;i=324",
               "TelemetryName": "walkin_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2530,9 +6276,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-WalkinFreezer-004",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:22.323938",
-      "NodeId": "ns=4;i=109",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=325",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
@@ -2543,7 +6289,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Freezer Temperature",
-              "NodeId": "ns=4;i=110",
+              "NodeId": "ns=4;i=326",
               "TelemetryName": "walkin_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2551,34 +6297,38 @@
               "RangeValueCount": 6,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                0,
-                1.34,
-                2.21,
-                0.34,
-                3.22,
-                4.23
+                29.11,
+                30.02,
+                29.21,
+                30.34,
+                30.22,
+                29.23
               ]
             },
             {
               "DisplayName": "Walkin Freezer Humidity",
-              "NodeId": "ns=4;i=111",
+              "NodeId": "ns=4;i=327",
               "TelemetryName": "walkin_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
               "OnlyOnValueChange": false,
-              "RangeValueCount": 5,
+              "RangeValueCount": 9,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                99.1,
-                98.0,
-                97.3,
-                93.4,
-                94.5
+                54.1,
+                55.0,
+                54.3,
+                53.4,
+                55.1,
+                54.2,
+                55.4,
+                54.6,
+                53.7
               ]
             },
             {
               "DisplayName": "Walkin Freezer Door Open Count",
-              "NodeId": "ns=4;i=112",
+              "NodeId": "ns=4;i=328",
               "TelemetryName": "walkin_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2595,7 +6345,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Door Ajar",
-              "NodeId": "ns=4;i=113",
+              "NodeId": "ns=4;i=329",
               "TelemetryName": "walkin_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2612,7 +6362,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Compressor Health",
-              "NodeId": "ns=4;i=114",
+              "NodeId": "ns=4;i=330",
               "TelemetryName": "walkin_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2633,9 +6383,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-WalkinFreezer-005",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:22.692937",
-      "NodeId": "ns=4;i=115",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=331",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:WalkinFreezer:1",
       "Interfaces": [
@@ -2646,7 +6396,7 @@
           "Variables": [
             {
               "DisplayName": "Walkin Freezer Temperature",
-              "NodeId": "ns=4;i=116",
+              "NodeId": "ns=4;i=332",
               "TelemetryName": "walkin_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2654,34 +6404,38 @@
               "RangeValueCount": 6,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                0,
-                1.34,
-                2.21,
-                0.34,
-                3.22,
-                4.23
+                29.11,
+                30.02,
+                29.21,
+                30.34,
+                30.22,
+                29.23
               ]
             },
             {
               "DisplayName": "Walkin Freezer Humidity",
-              "NodeId": "ns=4;i=117",
+              "NodeId": "ns=4;i=333",
               "TelemetryName": "walkin_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
               "OnlyOnValueChange": false,
-              "RangeValueCount": 5,
+              "RangeValueCount": 9,
               "RangeValueCurrent": 1,
               "RangeValues": [
-                99.1,
-                98.0,
-                97.3,
-                93.4,
-                94.5
+                54.1,
+                55.0,
+                54.3,
+                53.4,
+                55.1,
+                54.2,
+                55.4,
+                54.6,
+                53.7
               ]
             },
             {
               "DisplayName": "Walkin Freezer Door Open Count",
-              "NodeId": "ns=4;i=118",
+              "NodeId": "ns=4;i=334",
               "TelemetryName": "walkin_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2698,7 +6452,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Door Ajar",
-              "NodeId": "ns=4;i=119",
+              "NodeId": "ns=4;i=335",
               "TelemetryName": "walkin_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2715,7 +6469,7 @@
             },
             {
               "DisplayName": "Walkin Freezer Compressor Health",
-              "NodeId": "ns=4;i=120",
+              "NodeId": "ns=4;i=336",
               "TelemetryName": "walkin_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2736,9 +6490,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Fryer-001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:23.109936",
-      "NodeId": "ns=4;i=121",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=337",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
@@ -2749,7 +6503,7 @@
           "Variables": [
             {
               "DisplayName": "Fryer Temperature",
-              "NodeId": "ns=4;i=122",
+              "NodeId": "ns=4;i=338",
               "TelemetryName": "fryer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2767,7 +6521,7 @@
             },
             {
               "DisplayName": "Fryer Oil Quality",
-              "NodeId": "ns=4;i=123",
+              "NodeId": "ns=4;i=339",
               "TelemetryName": "fryer_oil_quality",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -2789,7 +6543,7 @@
             },
             {
               "DisplayName": "Fryer Heater Health",
-              "NodeId": "ns=4;i=124",
+              "NodeId": "ns=4;i=340",
               "TelemetryName": "fryer_heater_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2810,9 +6564,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Fryer-002",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:23.451943",
-      "NodeId": "ns=4;i=125",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=341",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
@@ -2823,7 +6577,7 @@
           "Variables": [
             {
               "DisplayName": "Fryer Temperature",
-              "NodeId": "ns=4;i=126",
+              "NodeId": "ns=4;i=342",
               "TelemetryName": "fryer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2841,7 +6595,7 @@
             },
             {
               "DisplayName": "Fryer Oil Quality",
-              "NodeId": "ns=4;i=127",
+              "NodeId": "ns=4;i=343",
               "TelemetryName": "fryer_oil_quality",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -2863,7 +6617,7 @@
             },
             {
               "DisplayName": "Fryer Heater Health",
-              "NodeId": "ns=4;i=128",
+              "NodeId": "ns=4;i=344",
               "TelemetryName": "fryer_heater_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2884,9 +6638,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Fryer-003",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:24.030937",
-      "NodeId": "ns=4;i=129",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=345",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
@@ -2897,7 +6651,7 @@
           "Variables": [
             {
               "DisplayName": "Fryer Temperature",
-              "NodeId": "ns=4;i=130",
+              "NodeId": "ns=4;i=346",
               "TelemetryName": "fryer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2915,7 +6669,7 @@
             },
             {
               "DisplayName": "Fryer Oil Quality",
-              "NodeId": "ns=4;i=131",
+              "NodeId": "ns=4;i=347",
               "TelemetryName": "fryer_oil_quality",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -2937,7 +6691,7 @@
             },
             {
               "DisplayName": "Fryer Heater Health",
-              "NodeId": "ns=4;i=132",
+              "NodeId": "ns=4;i=348",
               "TelemetryName": "fryer_heater_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -2958,9 +6712,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Fryer-004",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:25.031937",
-      "NodeId": "ns=4;i=133",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=349",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
@@ -2971,7 +6725,7 @@
           "Variables": [
             {
               "DisplayName": "Fryer Temperature",
-              "NodeId": "ns=4;i=134",
+              "NodeId": "ns=4;i=350",
               "TelemetryName": "fryer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -2989,7 +6743,7 @@
             },
             {
               "DisplayName": "Fryer Oil Quality",
-              "NodeId": "ns=4;i=135",
+              "NodeId": "ns=4;i=351",
               "TelemetryName": "fryer_oil_quality",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3011,7 +6765,7 @@
             },
             {
               "DisplayName": "Fryer Heater Health",
-              "NodeId": "ns=4;i=136",
+              "NodeId": "ns=4;i=352",
               "TelemetryName": "fryer_heater_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3032,9 +6786,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Fryer-005",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:25.481941",
-      "NodeId": "ns=4;i=137",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=353",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Fryer:1",
       "Interfaces": [
@@ -3045,7 +6799,7 @@
           "Variables": [
             {
               "DisplayName": "Fryer Temperature",
-              "NodeId": "ns=4;i=138",
+              "NodeId": "ns=4;i=354",
               "TelemetryName": "fryer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3063,7 +6817,7 @@
             },
             {
               "DisplayName": "Fryer Oil Quality",
-              "NodeId": "ns=4;i=139",
+              "NodeId": "ns=4;i=355",
               "TelemetryName": "fryer_oil_quality",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3085,7 +6839,7 @@
             },
             {
               "DisplayName": "Fryer Heater Health",
-              "NodeId": "ns=4;i=140",
+              "NodeId": "ns=4;i=356",
               "TelemetryName": "fryer_heater_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3106,9 +6860,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFridge-001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:25.857978",
-      "NodeId": "ns=4;i=141",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=357",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
@@ -3119,7 +6873,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Fridge Temperature",
-              "NodeId": "ns=4;i=142",
+              "NodeId": "ns=4;i=358",
               "TelemetryName": "standing_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3137,7 +6891,7 @@
             },
             {
               "DisplayName": "Standing Fridge Humidity",
-              "NodeId": "ns=4;i=143",
+              "NodeId": "ns=4;i=359",
               "TelemetryName": "standing_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3154,7 +6908,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Open Count",
-              "NodeId": "ns=4;i=144",
+              "NodeId": "ns=4;i=360",
               "TelemetryName": "standing_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3171,7 +6925,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Ajar",
-              "NodeId": "ns=4;i=145",
+              "NodeId": "ns=4;i=361",
               "TelemetryName": "standing_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3188,7 +6942,7 @@
             },
             {
               "DisplayName": "Standing Fridge Compressor Health",
-              "NodeId": "ns=4;i=146",
+              "NodeId": "ns=4;i=362",
               "TelemetryName": "standing_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3209,9 +6963,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFridge-002",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:26.233118",
-      "NodeId": "ns=4;i=147",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=363",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
@@ -3222,7 +6976,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Fridge Temperature",
-              "NodeId": "ns=4;i=148",
+              "NodeId": "ns=4;i=364",
               "TelemetryName": "standing_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3240,7 +6994,7 @@
             },
             {
               "DisplayName": "Standing Fridge Humidity",
-              "NodeId": "ns=4;i=149",
+              "NodeId": "ns=4;i=365",
               "TelemetryName": "standing_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3257,7 +7011,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Open Count",
-              "NodeId": "ns=4;i=150",
+              "NodeId": "ns=4;i=366",
               "TelemetryName": "standing_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3274,7 +7028,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Ajar",
-              "NodeId": "ns=4;i=151",
+              "NodeId": "ns=4;i=367",
               "TelemetryName": "standing_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3291,7 +7045,7 @@
             },
             {
               "DisplayName": "Standing Fridge Compressor Health",
-              "NodeId": "ns=4;i=152",
+              "NodeId": "ns=4;i=368",
               "TelemetryName": "standing_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3312,9 +7066,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFridge-003",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:26.656338",
-      "NodeId": "ns=4;i=153",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=369",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
@@ -3325,7 +7079,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Fridge Temperature",
-              "NodeId": "ns=4;i=154",
+              "NodeId": "ns=4;i=370",
               "TelemetryName": "standing_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3343,7 +7097,7 @@
             },
             {
               "DisplayName": "Standing Fridge Humidity",
-              "NodeId": "ns=4;i=155",
+              "NodeId": "ns=4;i=371",
               "TelemetryName": "standing_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3360,7 +7114,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Open Count",
-              "NodeId": "ns=4;i=156",
+              "NodeId": "ns=4;i=372",
               "TelemetryName": "standing_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3377,7 +7131,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Ajar",
-              "NodeId": "ns=4;i=157",
+              "NodeId": "ns=4;i=373",
               "TelemetryName": "standing_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3394,7 +7148,7 @@
             },
             {
               "DisplayName": "Standing Fridge Compressor Health",
-              "NodeId": "ns=4;i=158",
+              "NodeId": "ns=4;i=374",
               "TelemetryName": "standing_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3415,9 +7169,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFridge-004",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:27.021341",
-      "NodeId": "ns=4;i=159",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=375",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
@@ -3428,7 +7182,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Fridge Temperature",
-              "NodeId": "ns=4;i=160",
+              "NodeId": "ns=4;i=376",
               "TelemetryName": "standing_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3446,7 +7200,7 @@
             },
             {
               "DisplayName": "Standing Fridge Humidity",
-              "NodeId": "ns=4;i=161",
+              "NodeId": "ns=4;i=377",
               "TelemetryName": "standing_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3463,7 +7217,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Open Count",
-              "NodeId": "ns=4;i=162",
+              "NodeId": "ns=4;i=378",
               "TelemetryName": "standing_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3480,7 +7234,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Ajar",
-              "NodeId": "ns=4;i=163",
+              "NodeId": "ns=4;i=379",
               "TelemetryName": "standing_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3497,7 +7251,7 @@
             },
             {
               "DisplayName": "Standing Fridge Compressor Health",
-              "NodeId": "ns=4;i=164",
+              "NodeId": "ns=4;i=380",
               "TelemetryName": "standing_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3518,9 +7272,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFridge-005",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:27.421340",
-      "NodeId": "ns=4;i=165",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=381",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFridge:1",
       "Interfaces": [
@@ -3531,7 +7285,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Fridge Temperature",
-              "NodeId": "ns=4;i=166",
+              "NodeId": "ns=4;i=382",
               "TelemetryName": "standing_fridge_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3549,7 +7303,7 @@
             },
             {
               "DisplayName": "Standing Fridge Humidity",
-              "NodeId": "ns=4;i=167",
+              "NodeId": "ns=4;i=383",
               "TelemetryName": "standing_fridge_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3566,7 +7320,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Open Count",
-              "NodeId": "ns=4;i=168",
+              "NodeId": "ns=4;i=384",
               "TelemetryName": "standing_fridge_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3583,7 +7337,7 @@
             },
             {
               "DisplayName": "Standing Fridge Door Ajar",
-              "NodeId": "ns=4;i=169",
+              "NodeId": "ns=4;i=385",
               "TelemetryName": "standing_fridge_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3600,7 +7354,7 @@
             },
             {
               "DisplayName": "Standing Fridge Compressor Health",
-              "NodeId": "ns=4;i=170",
+              "NodeId": "ns=4;i=386",
               "TelemetryName": "standing_fridge_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3621,9 +7375,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFreezer-001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:27.783649",
-      "NodeId": "ns=4;i=171",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=387",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
@@ -3634,7 +7388,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Freezer Temperature",
-              "NodeId": "ns=4;i=172",
+              "NodeId": "ns=4;i=388",
               "TelemetryName": "standing_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3652,7 +7406,7 @@
             },
             {
               "DisplayName": "Standing Freezer Humidity",
-              "NodeId": "ns=4;i=173",
+              "NodeId": "ns=4;i=389",
               "TelemetryName": "standing_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3669,7 +7423,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Open Count",
-              "NodeId": "ns=4;i=174",
+              "NodeId": "ns=4;i=390",
               "TelemetryName": "standing_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3686,7 +7440,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Ajar",
-              "NodeId": "ns=4;i=175",
+              "NodeId": "ns=4;i=391",
               "TelemetryName": "standing_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3703,7 +7457,7 @@
             },
             {
               "DisplayName": "Standing Freezer Compressor Health",
-              "NodeId": "ns=4;i=176",
+              "NodeId": "ns=4;i=392",
               "TelemetryName": "standing_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3724,9 +7478,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFreezer-002",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:28.199649",
-      "NodeId": "ns=4;i=177",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=393",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
@@ -3737,7 +7491,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Freezer Temperature",
-              "NodeId": "ns=4;i=178",
+              "NodeId": "ns=4;i=394",
               "TelemetryName": "standing_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3755,7 +7509,7 @@
             },
             {
               "DisplayName": "Standing Freezer Humidity",
-              "NodeId": "ns=4;i=179",
+              "NodeId": "ns=4;i=395",
               "TelemetryName": "standing_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3772,7 +7526,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Open Count",
-              "NodeId": "ns=4;i=180",
+              "NodeId": "ns=4;i=396",
               "TelemetryName": "standing_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3789,7 +7543,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Ajar",
-              "NodeId": "ns=4;i=181",
+              "NodeId": "ns=4;i=397",
               "TelemetryName": "standing_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3806,7 +7560,7 @@
             },
             {
               "DisplayName": "Standing Freezer Compressor Health",
-              "NodeId": "ns=4;i=182",
+              "NodeId": "ns=4;i=398",
               "TelemetryName": "standing_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3827,9 +7581,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFreezer-003",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:28.582649",
-      "NodeId": "ns=4;i=183",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=399",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
@@ -3840,7 +7594,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Freezer Temperature",
-              "NodeId": "ns=4;i=184",
+              "NodeId": "ns=4;i=400",
               "TelemetryName": "standing_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3858,7 +7612,7 @@
             },
             {
               "DisplayName": "Standing Freezer Humidity",
-              "NodeId": "ns=4;i=185",
+              "NodeId": "ns=4;i=401",
               "TelemetryName": "standing_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3875,7 +7629,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Open Count",
-              "NodeId": "ns=4;i=186",
+              "NodeId": "ns=4;i=402",
               "TelemetryName": "standing_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3892,7 +7646,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Ajar",
-              "NodeId": "ns=4;i=187",
+              "NodeId": "ns=4;i=403",
               "TelemetryName": "standing_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3909,7 +7663,7 @@
             },
             {
               "DisplayName": "Standing Freezer Compressor Health",
-              "NodeId": "ns=4;i=188",
+              "NodeId": "ns=4;i=404",
               "TelemetryName": "standing_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3930,9 +7684,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFreezer-004",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:29.129652",
-      "NodeId": "ns=4;i=189",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=405",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
@@ -3943,7 +7697,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Freezer Temperature",
-              "NodeId": "ns=4;i=190",
+              "NodeId": "ns=4;i=406",
               "TelemetryName": "standing_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -3961,7 +7715,7 @@
             },
             {
               "DisplayName": "Standing Freezer Humidity",
-              "NodeId": "ns=4;i=191",
+              "NodeId": "ns=4;i=407",
               "TelemetryName": "standing_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -3978,7 +7732,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Open Count",
-              "NodeId": "ns=4;i=192",
+              "NodeId": "ns=4;i=408",
               "TelemetryName": "standing_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -3995,7 +7749,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Ajar",
-              "NodeId": "ns=4;i=193",
+              "NodeId": "ns=4;i=409",
               "TelemetryName": "standing_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4012,7 +7766,7 @@
             },
             {
               "DisplayName": "Standing Freezer Compressor Health",
-              "NodeId": "ns=4;i=194",
+              "NodeId": "ns=4;i=410",
               "TelemetryName": "standing_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4033,9 +7787,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-StandingFreezer-005",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:29.567648",
-      "NodeId": "ns=4;i=195",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=411",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:StandingFreezer:1",
       "Interfaces": [
@@ -4046,7 +7800,7 @@
           "Variables": [
             {
               "DisplayName": "Standing Freezer Temperature",
-              "NodeId": "ns=4;i=196",
+              "NodeId": "ns=4;i=412",
               "TelemetryName": "standing_freezer_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4064,7 +7818,7 @@
             },
             {
               "DisplayName": "Standing Freezer Humidity",
-              "NodeId": "ns=4;i=197",
+              "NodeId": "ns=4;i=413",
               "TelemetryName": "standing_freezer_humidity",
               "IoTCDataType": "integer",
               "Frequency": "Ring3",
@@ -4081,7 +7835,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Open Count",
-              "NodeId": "ns=4;i=198",
+              "NodeId": "ns=4;i=414",
               "TelemetryName": "standing_freezer_door_open_count",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4098,7 +7852,7 @@
             },
             {
               "DisplayName": "Standing Freezer Door Ajar",
-              "NodeId": "ns=4;i=199",
+              "NodeId": "ns=4;i=415",
               "TelemetryName": "standing_freezer_door_ajar",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4115,7 +7869,7 @@
             },
             {
               "DisplayName": "Standing Freezer Compressor Health",
-              "NodeId": "ns=4;i=200",
+              "NodeId": "ns=4;i=416",
               "TelemetryName": "standing_freezer_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4136,9 +7890,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-ColdTable-001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:29.934649",
-      "NodeId": "ns=4;i=201",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=417",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
@@ -4149,7 +7903,7 @@
           "Variables": [
             {
               "DisplayName": "Cold Table Temperature",
-              "NodeId": "ns=4;i=202",
+              "NodeId": "ns=4;i=418",
               "TelemetryName": "cold_table_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4167,7 +7921,7 @@
             },
             {
               "DisplayName": "Cold Table Compressor Health",
-              "NodeId": "ns=4;i=203",
+              "NodeId": "ns=4;i=419",
               "TelemetryName": "cold_table_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4188,9 +7942,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-ColdTable-002",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:30.449697",
-      "NodeId": "ns=4;i=204",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=420",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
@@ -4201,7 +7955,7 @@
           "Variables": [
             {
               "DisplayName": "Cold Table Temperature",
-              "NodeId": "ns=4;i=205",
+              "NodeId": "ns=4;i=421",
               "TelemetryName": "cold_table_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4219,7 +7973,7 @@
             },
             {
               "DisplayName": "Cold Table Compressor Health",
-              "NodeId": "ns=4;i=206",
+              "NodeId": "ns=4;i=422",
               "TelemetryName": "cold_table_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4240,9 +7994,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-ColdTable-003",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:30.829695",
-      "NodeId": "ns=4;i=207",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=423",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
@@ -4253,7 +8007,7 @@
           "Variables": [
             {
               "DisplayName": "Cold Table Temperature",
-              "NodeId": "ns=4;i=208",
+              "NodeId": "ns=4;i=424",
               "TelemetryName": "cold_table_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4271,7 +8025,7 @@
             },
             {
               "DisplayName": "Cold Table Compressor Health",
-              "NodeId": "ns=4;i=209",
+              "NodeId": "ns=4;i=425",
               "TelemetryName": "cold_table_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4292,9 +8046,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-ColdTable-004",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:31.183692",
-      "NodeId": "ns=4;i=210",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=426",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
@@ -4305,7 +8059,7 @@
           "Variables": [
             {
               "DisplayName": "Cold Table Temperature",
-              "NodeId": "ns=4;i=211",
+              "NodeId": "ns=4;i=427",
               "TelemetryName": "cold_table_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4323,7 +8077,7 @@
             },
             {
               "DisplayName": "Cold Table Compressor Health",
-              "NodeId": "ns=4;i=212",
+              "NodeId": "ns=4;i=428",
               "TelemetryName": "cold_table_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4344,9 +8098,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-ColdTable-005",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:31.507693",
-      "NodeId": "ns=4;i=213",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=429",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:ColdTable:1",
       "Interfaces": [
@@ -4357,7 +8111,7 @@
           "Variables": [
             {
               "DisplayName": "Cold Table Temperature",
-              "NodeId": "ns=4;i=214",
+              "NodeId": "ns=4;i=430",
               "TelemetryName": "cold_table_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4375,7 +8129,7 @@
             },
             {
               "DisplayName": "Cold Table Compressor Health",
-              "NodeId": "ns=4;i=215",
+              "NodeId": "ns=4;i=431",
               "TelemetryName": "cold_table_compressor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4396,9 +8150,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Dishwasher-001",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:31.817692",
-      "NodeId": "ns=4;i=216",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=432",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
@@ -4409,7 +8163,7 @@
           "Variables": [
             {
               "DisplayName": "Dishwasher Temperature",
-              "NodeId": "ns=4;i=217",
+              "NodeId": "ns=4;i=433",
               "TelemetryName": "dishwasher_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4427,7 +8181,7 @@
             },
             {
               "DisplayName": "Dishwasher Wash Cycles",
-              "NodeId": "ns=4;i=218",
+              "NodeId": "ns=4;i=434",
               "TelemetryName": "dishwasher_wash_cycles",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4444,7 +8198,7 @@
             },
             {
               "DisplayName": "Dishwasher Motor Health",
-              "NodeId": "ns=4;i=219",
+              "NodeId": "ns=4;i=435",
               "TelemetryName": "dishwasher_motor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4461,7 +8215,7 @@
             },
             {
               "DisplayName": "Dishwasher Heating Element Health",
-              "NodeId": "ns=4;i=220",
+              "NodeId": "ns=4;i=436",
               "TelemetryName": "dishwasher_heating_element_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4482,9 +8236,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Dishwasher-002",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:32.198042",
-      "NodeId": "ns=4;i=221",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=437",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
@@ -4495,7 +8249,7 @@
           "Variables": [
             {
               "DisplayName": "Dishwasher Temperature",
-              "NodeId": "ns=4;i=222",
+              "NodeId": "ns=4;i=438",
               "TelemetryName": "dishwasher_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4513,7 +8267,7 @@
             },
             {
               "DisplayName": "Dishwasher Wash Cycles",
-              "NodeId": "ns=4;i=223",
+              "NodeId": "ns=4;i=439",
               "TelemetryName": "dishwasher_wash_cycles",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4530,7 +8284,7 @@
             },
             {
               "DisplayName": "Dishwasher Motor Health",
-              "NodeId": "ns=4;i=224",
+              "NodeId": "ns=4;i=440",
               "TelemetryName": "dishwasher_motor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4547,7 +8301,7 @@
             },
             {
               "DisplayName": "Dishwasher Heating Element Health",
-              "NodeId": "ns=4;i=225",
+              "NodeId": "ns=4;i=441",
               "TelemetryName": "dishwasher_heating_element_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4568,9 +8322,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Dishwasher-003",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:32.513188",
-      "NodeId": "ns=4;i=226",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=442",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
@@ -4581,7 +8335,7 @@
           "Variables": [
             {
               "DisplayName": "Dishwasher Temperature",
-              "NodeId": "ns=4;i=227",
+              "NodeId": "ns=4;i=443",
               "TelemetryName": "dishwasher_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4599,7 +8353,7 @@
             },
             {
               "DisplayName": "Dishwasher Wash Cycles",
-              "NodeId": "ns=4;i=228",
+              "NodeId": "ns=4;i=444",
               "TelemetryName": "dishwasher_wash_cycles",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4616,7 +8370,7 @@
             },
             {
               "DisplayName": "Dishwasher Motor Health",
-              "NodeId": "ns=4;i=229",
+              "NodeId": "ns=4;i=445",
               "TelemetryName": "dishwasher_motor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4633,7 +8387,7 @@
             },
             {
               "DisplayName": "Dishwasher Heating Element Health",
-              "NodeId": "ns=4;i=230",
+              "NodeId": "ns=4;i=446",
               "TelemetryName": "dishwasher_heating_element_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4654,9 +8408,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Dishwasher-004",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:32.905239",
-      "NodeId": "ns=4;i=231",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=447",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
@@ -4667,7 +8421,7 @@
           "Variables": [
             {
               "DisplayName": "Dishwasher Temperature",
-              "NodeId": "ns=4;i=232",
+              "NodeId": "ns=4;i=448",
               "TelemetryName": "dishwasher_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4685,7 +8439,7 @@
             },
             {
               "DisplayName": "Dishwasher Wash Cycles",
-              "NodeId": "ns=4;i=233",
+              "NodeId": "ns=4;i=449",
               "TelemetryName": "dishwasher_wash_cycles",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4702,7 +8456,7 @@
             },
             {
               "DisplayName": "Dishwasher Motor Health",
-              "NodeId": "ns=4;i=234",
+              "NodeId": "ns=4;i=450",
               "TelemetryName": "dishwasher_motor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4719,7 +8473,7 @@
             },
             {
               "DisplayName": "Dishwasher Heating Element Health",
-              "NodeId": "ns=4;i=235",
+              "NodeId": "ns=4;i=451",
               "TelemetryName": "dishwasher_heating_element_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4740,9 +8494,9 @@
     },
     {
       "Name": "larouex-smart-kitchen-Dishwasher-005",
-      "Connected": true,
-      "ConnectedDateTime": "2020-11-12 13:31:33.265239",
-      "NodeId": "ns=4;i=236",
+      "Connected": false,
+      "ConnectedDateTime": "",
+      "NodeId": "ns=4;i=452",
       "DeviceType": "Devices",
       "DeviceCapabilityModelId": "urn:LarouexSmartKitchen:Dishwasher:1",
       "Interfaces": [
@@ -4753,7 +8507,7 @@
           "Variables": [
             {
               "DisplayName": "Dishwasher Temperature",
-              "NodeId": "ns=4;i=237",
+              "NodeId": "ns=4;i=453",
               "TelemetryName": "dishwasher_temperature",
               "IoTCDataType": "float",
               "Frequency": "Ring3",
@@ -4771,7 +8525,7 @@
             },
             {
               "DisplayName": "Dishwasher Wash Cycles",
-              "NodeId": "ns=4;i=238",
+              "NodeId": "ns=4;i=454",
               "TelemetryName": "dishwasher_wash_cycles",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4788,7 +8542,7 @@
             },
             {
               "DisplayName": "Dishwasher Motor Health",
-              "NodeId": "ns=4;i=239",
+              "NodeId": "ns=4;i=455",
               "TelemetryName": "dishwasher_motor_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",
@@ -4805,7 +8559,7 @@
             },
             {
               "DisplayName": "Dishwasher Heating Element Health",
-              "NodeId": "ns=4;i=240",
+              "NodeId": "ns=4;i=456",
               "TelemetryName": "dishwasher_heating_element_health",
               "IoTCDataType": "integer",
               "Frequency": "Ring2",

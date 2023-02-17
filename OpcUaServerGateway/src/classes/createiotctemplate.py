@@ -20,9 +20,9 @@ from asyncua import ua, Server
 from asyncua.common.methods import uamethod
 
 # our classes
-from Classes.config import Config
-from Classes.dcmtemplate import DcmTemplate
-from Classes.varianttype import VariantType
+from classes.config import Config
+from classes.dcmtemplate import DcmTemplate
+from classes.varianttype import VariantType
 
 class CreateIoTCTemplate():
     

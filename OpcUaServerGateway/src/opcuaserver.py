@@ -15,10 +15,10 @@ import  getopt, sys, time, string, threading, asyncio, os
 import logging as Log
 
 # our classes
-from Classes.opcuaserver import OpcUaServer
+from classes.opcuaserver import OpcUaServer
 
-from Classes.config import Config
-from Classes.varianttype import VariantType
+from classes.config import Config
+from classes.varianttype import VariantType
 
 # -------------------------------------------------------------------------------
 #   Setup the OPC Server for Multiple Twin and Device Patterns
